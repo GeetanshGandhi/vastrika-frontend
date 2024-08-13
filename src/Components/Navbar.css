@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    background-color: rgb(199, 186, 255);
+    padding: 10px;
+}
+#nav-logo{
+    height: 9vh;
+    margin: 0 30px;
+}
+.title{
+    font: 40px "Great Vibes", "Arial";
+    font-weight: bold;
+    margin-top: 10px;
+    color: rgb(80, 0, 69);
+}
+.login-btn{
+    padding: 3px 20px;
+    background-color: white;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    margin: 0 20px;
+    font: 17px Arial;
+    transition: all 0.25s ease-out;
+}
+.login-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: blueviolet;
+    color: white;
+}
+.register-link{
+    text-decoration: none;
+    color: rgb(69, 0, 158);
+    font: 17px "Arial";
+    margin: 0 10px;
+    transition: all 0.25s ease-out;
+}
+.register-link:hover{
+    transform: scale(1.2);
+}
