@@ -14,10 +14,10 @@ nav{
 .title{
     font: 40px "Great Vibes", "Arial";
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
     color: rgb(80, 0, 69);
 }
-.login-btn{
+.gotologin-btn{
     padding: 3px 20px;
     background-color: white;
     border: 2px solid blueviolet;
@@ -26,19 +26,22 @@ nav{
     font: 17px Arial;
     transition: all 0.25s ease-out;
 }
-.login-btn:hover{
+.gotologin-btn:hover{
     cursor: pointer;
     transform: scale(1.1);
     background-color: blueviolet;
     color: white;
 }
-.register-link{
+.gotoregister-link{
     text-decoration: none;
     color: rgb(69, 0, 158);
     font: 17px "Arial";
     margin: 0 10px;
     transition: all 0.25s ease-out;
+    padding: 3px 10px;
+    border-radius: 5px; 
 }
-.register-link:hover{
-    transform: scale(1.2);
+.gotoregister-link:hover{
+    color: black;
+    background-color: rgb(255,255,255,0.4);
 }

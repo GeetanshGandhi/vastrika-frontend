@@ -11,8 +11,8 @@ import CustomerRegistration from './Components/CustomerRegistration';
 function App() {
 	const [login, setlogin] = useState(null);
 	useEffect(() => {
-		if(localStorage.getItem("logindata")!==null){
-			setlogin(JSON.parse(localStorage.getItem("logindata")));
+		if(localStorage.getItem("slelologindata")!==null){
+			setlogin(JSON.parse(localStorage.getItem("slelologindata")));
 		}
 	}, [])
 	const router = createBrowserRouter([

@@ -19,8 +19,8 @@ export default function Navbar() {
                 {
                 login===null?
                 <>
-                    <button onClick={navigate("/custLogin")} className='login-btn'>Login</button>
-                    <Link className="register-link" to='/custRegister'>Register</Link>
+                    <button onClick={()=>navigate("/custLogin")} className='gotologin-btn'>Login</button>
+                    <Link className="gotoregister-link" to='/custRegister'>Register</Link>
                 </>
                 :<>
                 </>
