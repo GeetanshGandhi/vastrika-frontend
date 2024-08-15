@@ -5,9 +5,9 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
 import CustomerLogin from './Components/CustomerLogin';
-import { ToastContainer, Bounce } from 'react-toastify';
+import { ToastContainer, Slide} from 'react-toastify';
 import CustomerRegistration from './Components/CustomerRegistration';
-
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
 	const [login, setlogin] = useState(null);
 	useEffect(() => {
@@ -30,7 +30,7 @@ function App() {
 		<div className="App">
 			<RouterProvider router={router}/>
 			<ToastContainer position="top-right"
-                        autoClose={5000}
+                        autoClose={2500}
                         hideProgressBar={false}
                         newestOnTop={false}
                         closeOnClick
@@ -39,7 +39,7 @@ function App() {
                         draggable
                         pauseOnHover
                         theme="light"
-                        transition= {Bounce}/>
+                        transition= {Slide}/>
 		</div>
 	);
 }

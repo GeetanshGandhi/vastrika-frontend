@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 .login-container{
     background-color: white;
-    width: 500px;
+    width: 40%;
     height: 90%;
     box-shadow: 0 0 20px #0000005b;
 }
 .login-head{
     text-align: center;
     margin: 20px;
-    font: 30px "Poppins";
+    font: 6vh "Poppins";
     font-weight: bold;
 }
 .mail-container{
@@ -19,19 +20,38 @@
     width: 80%;
     margin: 0 10% 20px 10%;
 }
+.ip-head{
+    font: 3.5vh Arial;
+    margin: 5px 0;
+}
+.ip-input{
+    width: 100%;
+    font: 3.5vh "Nunito", Arial;
+    padding: 3px 5px;
+    color: grey;
+    border: 2px solid rgb(192, 133, 247);
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+}
+::placeholder{
+    font-style: italic;
+}
+.ip-input:focus{
+    border-radius: 9px;
+}
 .toggle-pass{
-    font: 15px Arial;
+    font: 3vh Arial;
     font-style: italic;
     transition: all 0.2s ease-out;
 }
 .toggle-pass:hover{
     cursor: pointer;
-    font-weight: bold;
+    transform: scale(1.1);
 }
 .login-btn{
-    padding: 3px 50px;
-    font: 17px Arial;
-    margin: 20px 0 30px 0;
+    padding: 3px 8vh;
+    font: 3.5vh Arial;
+    margin: 3.6vh 0 5.5vh 0;
     background-color: rgb(137, 110, 255);
     border: 2px solid rgb(112, 80, 255);
     color: white;
@@ -45,12 +65,12 @@
     font-weight: bold;
 }
 .newuser-msg{
-    font: 17px Arial;
+    font: 3.2vh Arial;
     margin: 0 10px 0 0;
 }
 .newuser-link{
     text-decoration: none;
-    font: 17px Arial;
+    font: 3.2vh Arial;
     font-style: italic;
     color: rgb(50, 0, 90);
     padding: 2px 5px;
