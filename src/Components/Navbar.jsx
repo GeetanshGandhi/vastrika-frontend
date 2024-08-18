@@ -5,10 +5,15 @@ export default function Navbar() {
     const navigate = useNavigate();
     const [login, setlogin] = useState(null);
     useEffect(()=>{
-        if(localStorage.getItem("slelo_logindata")!==null){
-            setlogin(JSON.parse(localStorage.getItem("slelo_logindata")));
+        if(localStorage.getItem("vastrikaUser")!==null){
+            setlogin(JSON.parse(localStorage.getItem("vastrikaUser")));
         }
     },[])
+    const dologout = () => {
+        localStorage.removeItem("vastrikaUser");
+        navigate("/")
+        window.location.reload();
+    }
     return (
         <nav>
             <div className="wrapper left">
@@ -32,6 +37,7 @@ export default function Navbar() {
                     <Link className="gotoregister-link" to='/custRegister'>Register</Link>
                 </>
                 :<>
+                    <button onClick={dologout} className="logout-btn">Log out</button>
                 </>
                 }
             </div>

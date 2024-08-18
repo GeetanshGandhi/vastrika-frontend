@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './Components/Navbar';
@@ -9,12 +9,12 @@ import { ToastContainer, Slide} from 'react-toastify';
 import CustomerRegistration from './Components/CustomerRegistration';
 import 'react-toastify/dist/ReactToastify.css';
 function App() {
-	const [login, setlogin] = useState(null);
-	useEffect(() => {
-		if(localStorage.getItem("slelologindata")!==null){
-			setlogin(JSON.parse(localStorage.getItem("slelologindata")));
-		}
-	}, [])
+	// const [login, setlogin] = useState(null);
+	// useEffect(() => {
+	// 	if(localStorage.getItem("slelologindata")!==null){
+	// 		setlogin(JSON.parse(localStorage.getItem("slelologindata")));
+	// 	}
+	// }, [])
 	const router = createBrowserRouter([
 		{
 			path:'/', element: <><Navbar/><Home/><Footer/></>

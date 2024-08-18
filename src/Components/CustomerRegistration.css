@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.register-container{
+    height: 150vh;
+    background-color: rgb(244, 244, 255);
+}
+.register-form{
+    width: 70%;
+    height: 90%;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(150,150,150);
+}
+.reg-head{
+    text-align: center;
+    margin-top: 20px;
+    font: 6vh "Poppins", Arial;
+    font-weight: bold;
+}
+.form-row-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+}
+.form-ip{
+    position: relative;
+    width: 100%;
+}
+.form-ip-head{
+    cursor: text;
+    position: absolute;
+    top: 6vh;
+    left: 1vw;
+    font: 3.5vh "Ubuntu", Arial;
+    color: grey;
+    transition: all 0.2s ease-out;
+}
+.form-ip-input{
+    width: 80%;
+    margin: 5vh 0 3vh 0;
+    font: 3.5vh "Ubuntu", Arial;
+    color: rgb(90, 90, 90);
+    padding: 4px 5px;
+    border: 2px solid white;
+    border-bottom: 2px solid rgb(192, 133, 247);
+    transition: all 0.2s ease-out;
+}
+.form-ip-input:focus{
+    outline: none;
+    border: 2px solid rgb(74, 0, 172);
+    border-radius: 7px;
+}
+.form-ip-input:focus ~ .form-ip-head, .form-ip-input:not(:placeholder-shown) ~ .form-ip-head{
+    top: 3.5vh;
+    font-size: 2.5vh;
+    background-color: white;
+}
+
+.add-details{
+    font: 3.5vh "Ubuntu", Arial;
+    margin: 0 7%;
+}
+.select-msg{
+    font: 3.5vh "Ubuntu", Arial;
+    margin: 3vh 0 1.5vh 0;
+}
+#selectcity, #selectstate{
+    font: 3.5vh "Ubuntu", Arial;
+    color: rgb(43, 43, 43);
+    background-color: rgb(240, 229, 255);
+    border: 2px solid rgb(192, 133, 247);
+    border-radius: 10px;
+    width: 90%;
+    padding: 4px 20px;
+}
+.createpass-msg{
+    margin: 5vh 0 0 3vw;
+    font: 3.5vh "Ubuntu", Arial;
+}
+#pass-guide{
+    width:28vw;
+    margin: 2vh 5vw 0 3vw;
+    font: 2.5vh Arial;
+    color: rgb(0, 172, 23);
+}
+.show-pass{
+    text-align: center;
+    font: 2.5vh "Ubuntu",Arial;
+    font-style: italic;
+    transition: all 0.2s ease-out;
+}
+.show-pass:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    font-weight: bold;
+}
+.register-btn{
+    margin: 7vh 0 0 0;
+    font: 3vh Arial;
+    padding: 3px 4vw;
+    background-color: rgb(224, 190, 255);
+    border: 2px solid rgb(74, 0, 172);
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.register-btn:hover{
+    cursor: pointer;
+    background-color: rgb(74, 0, 172);
+    color: white;
+}
+.alry-reg{
+    margin: 4vh 0.4vw 0 0;
+    font: 3vh "Ubuntu", Arial;
+}
+.goto-login{
+    text-decoration: none;
+    margin: 4vh 0 0 0;
+    font: 3vh "Ubuntu", Arial;
+    transition: all 0.2s ease-out;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.goto-login:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(46, 0, 107);
+}

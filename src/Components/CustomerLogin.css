@@ -4,7 +4,7 @@
     background-color: white;
     width: 40%;
     height: 90%;
-    box-shadow: 0 0 20px #0000005b;
+    box-shadow: 0 0 20px rgb(92, 92, 92);
 }
 .login-head{
     text-align: center;
@@ -33,11 +33,13 @@
     border-radius: 5px;
     transition: all 0.3s ease-out;
 }
-::placeholder{
-    font-style: italic;
-}
 .ip-input:focus{
+    border-color: blue;
     border-radius: 9px;
+    outline: none;
+}
+.ip-input:focus > ::placeholder{
+    font: 2px Arial;
 }
 .toggle-pass{
     font: 3vh Arial;

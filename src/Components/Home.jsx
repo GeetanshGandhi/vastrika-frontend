@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 export default function Home() {
-  return (
-    <div>
-      <p>home page</p>
-    </div>
-  )
+	// useEffect(() => {
+	// 	if(localStorage.getItem("vastrikaLoginToast")!==null){
+	// 		toast.success("Login Successful!");
+	// 		localStorage.removeItem("vastrikaLoginToast");
+	// 	}
+	// }, [])
+	return (
+		<div>
+			<p>home page</p>
+		</div>
+	)
 }

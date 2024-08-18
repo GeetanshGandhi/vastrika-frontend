@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './CustomerLogin.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axios from 'axios';
 export default function CustomerLogin() {
     const [creds, setcreds] = useState({
         customerEmail:'', password:''
@@ -14,10 +13,11 @@ export default function CustomerLogin() {
     const handleFieldChange = (e, field) => {
         setcreds({...creds, [field]:e.target.value});
     }
+    const navigate = useNavigate();
     const dologin = async() => {
         if(creds["customerEmail"] === ''){toast.error("Please Provide an Email!"); return;}
         if(creds["password"] === ''){toast.error("Please Provide a Password!"); return;}
-        let res = await fetch("http://localhost:8080/customer/loginCustomer",{
+        let res = await fetch(process.env.REACT_APP_BACKEND+"customer/loginCustomer",{
             headers: {"content-type":"application/json"},
             body: JSON.stringify(creds),
             method: "POST"
@@ -26,7 +26,13 @@ export default function CustomerLogin() {
         if(res==="Not Found") {toast.error("User Not Found!"); return;}
         if(res==="Invalid") {toast.error("Invalid Password!");return;}
         else{
-            toast.success("Login Successful!",{delay:2000});
+            localStorage.setItem("vastrikaUser",res);
+            navigate("/");
+            toast.success("Login Successful! Please wait...",{autoClose:2000});
+            setTimeout(()=>{
+                window.location.reload();
+            },3000);
+            // localStorage.setItem("vastrikaLoginToast", "true");
         }
     }
     return (

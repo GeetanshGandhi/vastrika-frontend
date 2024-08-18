@@ -3,9 +3,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    height: 12vh;
     background-color: rgb(199, 186, 255);
-    padding: 10px;
 }
 #nav-logo{
     height: 12vh;
@@ -15,19 +14,20 @@ nav{
     position: relative;
     top: 1.5vh;
     font: 10vh "Great Vibes";
+    font-weight: bold;
     color:rgb(80, 0, 69)
 }
 .title{
     position:relative;
-    top: 1.5vh;
-    left: 3px;
+    top: 0.7vh;
+    left: 5px;
     font: 7vh "Great Vibes", "Arial";
     font-weight: bold;
     color: rgb(80, 0, 69);
 }
 .punchline{
     position: relative;
-    left: 0vw;
+    bottom: 1.3vh;
     font: 3.2vh "Great Vibes", Arial;
     color:rgb(97, 0, 189);
 }
