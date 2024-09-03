@@ -116,7 +116,7 @@ export default function CustomerRegistration() {
 		}
 	}
 	return (
-		<div className='wrapper register-container'>
+		<div className='super-flex-container'>
 			<div className="register-form">
 				<p className="reg-head">Register</p>
 				<div className="form-row-wrap">

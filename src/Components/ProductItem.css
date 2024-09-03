@@ -1,0 +1,21 @@
+.prod-item-container{
+    margin: 0 1vw;
+    width: 250px;
+    padding: 20px 20px;
+    background-color: white;
+    border: 1px solid grey;
+}
+.prod-img{
+    width: 180px;
+}
+.prod-img:hover{
+    cursor: url("../images/icons/zoomIcon.png");
+}
+
+.image-popup{
+    background-color: rgb(0,0,0,0);
+}
+.zoomed-img{
+    height: 90vh;
+    width: 20vh;
+}

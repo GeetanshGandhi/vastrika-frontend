@@ -88,3 +88,20 @@ nav{
 .search-bar input:focus{
     outline: none;
 }
+
+.logout-btn{
+    margin-right: 2vw;
+    padding: 3px 17px;
+    font: 2.5vh Arial;
+    font-weight: bold;
+    color: rgb(110, 0, 0);
+    background-color: white;
+    border: 2px solid rgb(177, 0, 0);
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+}
+.logout-btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(177, 0, 0);
+}

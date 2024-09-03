@@ -8,6 +8,7 @@ import CustomerLogin from './Components/CustomerLogin';
 import { ToastContainer, Slide} from 'react-toastify';
 import CustomerRegistration from './Components/CustomerRegistration';
 import 'react-toastify/dist/ReactToastify.css';
+import 'reactjs-popup/dist/index.css'
 function App() {
 	// const [login, setlogin] = useState(null);
 	// useEffect(() => {

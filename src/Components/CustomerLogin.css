@@ -5,6 +5,7 @@
     width: 40%;
     height: 90%;
     box-shadow: 0 0 20px rgb(92, 92, 92);
+    padding: 4vh 0;
 }
 .login-head{
     text-align: center;

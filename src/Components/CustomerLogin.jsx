@@ -32,11 +32,10 @@ export default function CustomerLogin() {
             setTimeout(()=>{
                 window.location.reload();
             },3000);
-            // localStorage.setItem("vastrikaLoginToast", "true");
         }
     }
     return (
-        <div className='wrapper light-container'>
+        <div className='super-flex-container'>
             <div className="login-container">
                 <h2 className="login-head">Login</h2>
                 <div className="mail-container">
