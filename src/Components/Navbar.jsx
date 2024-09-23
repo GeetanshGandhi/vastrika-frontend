@@ -36,9 +36,13 @@ export default function Navbar() {
                     <button onClick={()=>navigate("/custLogin")} className='gotologin-btn'>Login</button>
                     <Link className="gotoregister-link" to='/custRegister'>Register</Link>
                 </>
-                :<>
+                :<div className='wrapper'>
+                    <Link className='cart-link' to="/cart">
+                        <img id='cart-icon' src={require("../images/icons/cartIcon.png")} alt="" />
+                        <p className="cart-msg">Your cart</p>
+                    </Link>
                     <button onClick={dologout} className="logout-btn">Log out</button>
-                </>
+                </div>
                 }
             </div>
         </nav>

@@ -59,7 +59,7 @@ export default function CustomerLogin() {
 
                 <div className="wrapper">
                     <p className="newuser-msg">New User?</p>
-                    <Link to="custRegister" className='newuser-link'>Register</Link>
+                    <Link to="/custRegister" className='newuser-link'>Register</Link>
                 </div>
             </div>
         </div>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+.prod-det-innerwrapper{
+    padding: 17px;
+    border-top: 2px solid purple;;
+    display: flex;
+    justify-content: center;
+}
+#prod-image{
+    width: 500px;
+    margin: 30px 0 30px 30px;
+    border: 1px solid grey;
+}
+.prod-dets{
+    margin: 30px 0 0 50px;
+    width: 750px;
+}
+.saree-title{
+    text-align: center;
+    font: 30px "Space Grotesk";
+    font-weight: bold;
+}
+.saree-desc{
+    margin: 20px 0;
+    font: 20px Arial;
+    color: grey;
+}
+.city-name{
+    text-align: center;
+    font: 30px "Poppins";
+    color: grey;
+}
+.city-name span{
+    font-weight: bold;
+    color: rgb(143, 0, 187);
+}
+.addtocart-btn{
+    margin: 20px 0;
+    width: 100%;
+    padding: 5px 0;
+    font: 23px "Ubuntu", Arial;
+    background-color: rgb(230, 167, 255);
+    border: 2px solid rgb(53, 0, 102);
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.addtocart-btn:hover{
+    cursor: pointer;
+    background-color: rgb(53, 0, 102);
+    color: white;
+}
+.select-qty-msg{
+    margin: 0 20px 0 0;
+    font: 20px "Ubuntu", Arial;
+    display: none;
+}
+#quantity-ip{
+    display: none;
+    font: 20px "Ubuntu", Arial;
+    padding: 3px 10px;
+    border: 1px solid purple;
+    border-radius: 5px;
+    outline: none;
+}
+#quantity-ip:focus{
+    border: 2px solid purple;
+    border-radius: 10px;
+}

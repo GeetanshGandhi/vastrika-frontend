@@ -9,6 +9,8 @@ import { ToastContainer, Slide} from 'react-toastify';
 import CustomerRegistration from './Components/CustomerRegistration';
 import 'react-toastify/dist/ReactToastify.css';
 import 'reactjs-popup/dist/index.css'
+import ProductDetails from './Components/ProductDetails';
+import Cart from './Components/Cart';
 function App() {
 	// const [login, setlogin] = useState(null);
 	// useEffect(() => {
@@ -24,7 +26,13 @@ function App() {
 			path:'/custLogin', element: <><Navbar/><CustomerLogin/><Footer/></>
 		},
 		{
-			path:'custRegister', element: <><Navbar/><CustomerRegistration/><Footer/></>
+			path:'/custRegister', element: <><Navbar/><CustomerRegistration/><Footer/></>
+		},
+		{
+			path: '/productDetails', element: <><Navbar/><ProductDetails/><Footer/></>
+		},
+		{
+			path: '/cart', element: <><Navbar/><Cart/></>
 		}
 	])
 	return (

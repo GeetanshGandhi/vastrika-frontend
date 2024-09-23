@@ -1,0 +1,36 @@
+.cartitem-container{
+    padding: 20px;
+    margin: 20px;
+    width: 200px; 
+    background-color: white;
+    border: 1px solid grey;
+}
+.cartitem-container:hover{
+    transform: ;
+}
+.cartitem-img{
+    width: 150px;
+    border: 1px solid rgb(201, 201, 201);
+}
+.cartitem-name{
+    margin-top: 10px;
+    text-align: center;
+    font: 20px Arial;
+}
+.cartitem-remove-btn{
+    margin-top: 10px;
+    padding: 3px 0;
+    width: 100%;
+    font: 17px Arial;
+    font-weight: bold;
+    background-color: rgb(255, 181, 181);
+    border: 2px solid red;
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.cartitem-remove-btn:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    transform: scale(1.1);
+}

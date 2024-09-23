@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.gateway-error{
+    font: 50px monospace;
+}
+.login-user{
+    text-align: right;
+    padding: 0 40px 0 0;
+    font: 15px "Ubuntu", Arial;
+}
+.user-email{
+    color: rgba(0, 0, 255, 0.705);
+}
+.cart-head{
+    text-align: center;
+    font: 50px "Ubuntu";
+    text-shadow: 0px 0px 5px rgb(52, 0, 95);
+    color: rgb(80, 0, 145);
+    font-weight: bold;
+}
+.cartitem-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

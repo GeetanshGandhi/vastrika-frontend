@@ -13,13 +13,16 @@ export default function Home() {
 			headers:{"content-type":"application/json"},
 			method: "GET"
 		}).then((res)=>res.json()).then((data)=>setallproducts(data))
+		.then({
+			
+		})
 	},[])
 	return (
 		<div className='super-nonflex-container'>
 			<div className="all-prod-container">
 			{
-				allproducts.map((item)=>{
-					return <><ProductItem item={item}/></>
+				allproducts.map((item, index)=>{
+					return <><ProductItem item={item} key={index}/></>
 				})
 			}
 			</div>
