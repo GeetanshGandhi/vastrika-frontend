@@ -18,7 +18,7 @@ export default function ProductItem({item, itemState}) {
         <div onClick={handleGoToProduct} className='prod-item-container'>
             <Popup trigger={
                 <div className="wrapper">
-                    <img className='prod-img' src={require("../../../backend/product_images/"+item["productId"]+".jpg")} alt="pritem" />    
+                    <img className='prod-img' src={`data:image/png;base64,${item.productImage}`} alt="pritem" />    
                 </div>
                 }
                 modal nested
@@ -27,7 +27,7 @@ export default function ProductItem({item, itemState}) {
                 {
                     close=>(                     
                     <div className='wrapper'>
-                        <img className='zoomed-img' src={require("../../../backend/product_images/"+item["productId"]+".jpg")} alt="zoom" />
+                        <img className='zoomed-img' src={`data:image/png;base64,${item.productImage}`} alt="zoom" />
                         <img onClick={close} className="close-icon" src={require("../images/icons/closeIcon.png")} alt="close" / >
                     </div>
                 )}

@@ -4,9 +4,10 @@
     width: 200px; 
     background-color: white;
     border: 1px solid grey;
+    transition: all 0.2s ease-out;
 }
 .cartitem-container:hover{
-    transform: ;
+    transform: scale(1.1);
 }
 .cartitem-img{
     width: 150px;

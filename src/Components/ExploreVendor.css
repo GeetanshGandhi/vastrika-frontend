@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.no-prods{
+    font: 20px Arial;
+    color: grey;
+}
+.vendor-explore-name{
+    text-align: center;
+    font: 8vh "Josefin Sans", Arial;
+    color: rgb(115, 0, 150);
+}
+.vendor-explore-owner{
+    text-align: center;
+    font: 4vh "Josefin Sans", Arial;
+    font-style: italic;
+    color: rgb(115, 0, 150, 0.65);
+}
+.vendor-explore-head{
+    margin: 3vh 0 0 0;
+    font: 4vh "Handlee", Arial;
+    font-weight: bold;
+}
+.vendor-prod-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

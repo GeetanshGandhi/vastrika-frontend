@@ -10,7 +10,6 @@ export default function ProductDetails() {
         }
     },[])
     const {state} = useLocation();
-    const [item, setitem] = useState(state)
 
     const [quantity, setquantity] = useState(0)
     const handleChangeQty = (e)=>{
@@ -44,7 +43,7 @@ export default function ProductDetails() {
         //processing add request
         let form = new FormData();
         form.append("customerEmail", login["customerEmail"])
-        form.append("productId", item["productId"])
+        form.append("productId", state["productId"])
         form.append("quantity", quantity)
 
         const res = await fetch(process.env.REACT_APP_BACKEND+"cart/add",{
@@ -54,11 +53,11 @@ export default function ProductDetails() {
         const response = await res.text(); 
         console.log(response);
         if(res.status===500){
-            toast.error("Could not Add item to cart! Please Try again later.")
+            toast.error("Could not Add state to cart! Please Try again later.")
             return;
         }
         if(response==="Exist") {
-            toast.error("This item already exists in your cart!");
+            toast.error("This state already exists in your cart!");
             return;
         }
         qty.style.display="block";
@@ -67,17 +66,17 @@ export default function ProductDetails() {
         addbtn.style.backgroundColor= "rgb(226,255,220)"
         addbtn.style.color="rgb(0,50,0)"
         addbtn.style.borderColor="rgb(0,50,0)"
-        toast.success("Item added to cart!")
+        toast.success("state added to cart!")
     }
     return (
         <>
-        <p>{JSON.stringify(item)}</p>
+        <p>{JSON.stringify(state)}</p>
         <div className='prod-det-innerwrapper'>
-            <img id='prod-image' src={require("../../../backend/product_images/"+item.productId+".jpg")} alt="" />
+            <img id='prod-image' src={require("../../../backend/product_images/"+state.productId+".jpg")} alt="" />
             <div className="prod-dets">
-                <p className='saree-title'>{item.productName}</p>
-                <p className="city-name">Place of Origin: <span>{item.city.cityName}</span></p>
-                <p className="saree-desc">{item.description}</p>
+                <p className='saree-title'>{state.productName}</p>
+                <p className="city-name">Place of Origin: <span>{state.city.cityName}</span></p>
+                <p className="saree-desc">{state.description}</p>
                 <div className="wrapper">
                     <p className="select-qty-msg">Select Quantity (less than 5) to add: </p>
                     <input onChange={(e)=>handleChangeQty(e)} type="number" id='quantity-ip' min='1' max='5'/>

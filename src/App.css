@@ -13,7 +13,7 @@
 .super-nonflex-container {
 	min-height: 88vh;
 	background-color: rgb(247, 240, 255);
-	padding: 10vh 5vw;
+	padding: 2vh 2vw 10vh 2vw;
 }
 
 .super-flex-container {

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+.explore-cityicon{
+    position: relative;
+    right: 30vw;
+    height: 100px;
+}
+.explore-cityname{
+    font: 10vh "Playpen sans", Arial;
+    font-weight: bold;
+    color: rgb(94, 0, 122);
+}
+.explore-citydesc{
+    padding: 1vh 2vw;
+    font: 3.2vh "Ubuntu", Arial;
+    line-height: 4vh; 
+    color: rgb(167, 91, 151);   
+}
+.vendor-head{
+    margin: 2vh 0 0 0;
+    font: 4.5vh "Handlee", Arial;
+    font-weight: bold;
+}
+.vendor-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.vendor{
+    width: 27%;
+    margin: 4vh 4%;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid rgb(161, 228, 255);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+.vendor:hover{
+    transform: scale(1.2);
+    background-color: rgb(85, 207, 255);
+    border: 1px solid blue;
+}
+.vendor-name{
+    text-align: center;
+    font: 4.7vh "Josefin sans", Arial;
+    color: rgb(16, 125, 228);
+    transition: all 0.2s ease-out;
+}
+.vendor:hover > .vendor-name{
+    color: white;
+}
+.vendor-owner{
+    text-align: center;
+    font: 3vh "Josefin Sans", Arial;
+    color: blue;
+    font-style: italic;
+}
+.det-wrapper{
+    margin: 2vh 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.det-icon{
+    margin: 0 10px 0 0;
+    height: 3vh;
+}
+.vendor-address{
+    font: 3vh Arial;
+    color: black;
+}

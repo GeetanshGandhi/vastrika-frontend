@@ -11,6 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'reactjs-popup/dist/index.css'
 import ProductDetails from './Components/ProductDetails';
 import Cart from './Components/Cart';
+import ExploreCity from './Components/ExploreCity';
+import ExploreVendor from './Components/ExploreVendor';
 function App() {
 	// const [login, setlogin] = useState(null);
 	// useEffect(() => {
@@ -33,6 +35,12 @@ function App() {
 		},
 		{
 			path: '/cart', element: <><Navbar/><Cart/></>
+		},
+		{
+			path: '/exploreCity', element: <><Navbar/><ExploreCity/></>
+		},
+		{
+			path: '/exploreVendor', element: <><Navbar/><ExploreVendor/></>
 		}
 	])
 	return (

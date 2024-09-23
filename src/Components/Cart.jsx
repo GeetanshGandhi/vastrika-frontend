@@ -32,7 +32,10 @@ export default function Cart() {
             <p className="login-user">Logged in as: <span className='user-email'>{login.customerEmail}</span></p>
             <p className="cart-head">Cart</p>
             <div className="cartitem-box">
-                {
+                {   
+                    cart_items.length===0?
+                    <p className="empty-cart-msg">- Add items to Cart to view them here -</p>
+                    :
                     cart_items.map((item)=>{
                         return <CartItem item={item} removeProduct={removeProductFromCart}/>
                     })
