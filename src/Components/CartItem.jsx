@@ -23,7 +23,7 @@ export default function CartItem({ item, removeProduct }) {
         <div className='cartitem-container'>
             <div className="wrapper">
                 <img className='cartitem-img'
-                src={require("../../../backend/product_images/"+item["product"]["productId"]+".jpg")} alt="" />
+                src={`data:image/png;base64,${item.product.productImage}`} alt="" />
             </div>
             <p className="cartitem-name">{item["product"]["productName"]}</p>
             <div className="wrapper">

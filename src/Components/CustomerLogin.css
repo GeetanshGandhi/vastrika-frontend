@@ -6,12 +6,20 @@
     height: 90%;
     box-shadow: 0 0 20px rgb(92, 92, 92);
     padding: 4vh 0;
+    @media (max-width: 1000px) {
+        width: 95%;
+        height: 95%;
+        padding: 2vh 0;
+    }
 }
 .login-head{
     text-align: center;
     margin: 20px;
     font: 6vh "Poppins";
     font-weight: bold;
+    @media (max-width: 500px){
+        font-size: 35px;
+    }
 }
 .mail-container{
     width: 80%;
@@ -24,6 +32,9 @@
 .ip-head{
     font: 3.5vh Arial;
     margin: 5px 0;
+    @media (max-width: 500px){
+        font-size: 15px;
+    }
 }
 .ip-input{
     width: 100%;
@@ -46,6 +57,9 @@
     font: 3vh Arial;
     font-style: italic;
     transition: all 0.2s ease-out;
+    @media (max-width: 500px) {
+        font-size: 2vh;
+    }
 }
 .toggle-pass:hover{
     cursor: pointer;
@@ -60,6 +74,10 @@
     color: white;
     border-radius: 7px;
     transition: all 0.2s ease-out;
+    @media (max-width: 500px) {
+        font-size: 2.5vh;
+        width: 80%;
+    }
 }
 .login-btn:hover{
     cursor: pointer;
@@ -70,6 +88,9 @@
 .newuser-msg{
     font: 3.2vh Arial;
     margin: 0 10px 0 0;
+    @media (max-width: 500px) {
+        font-size: 2.2vh;
+    }
 }
 .newuser-link{
     text-decoration: none;
@@ -79,6 +100,9 @@
     padding: 2px 5px;
     transition: all 0.2s ease-out;
     border-radius: 4px;
+    @media (max-width: 500px) {
+        font-size: 2.2vh;
+    }
 }
 .newuser-link:hover{
     transform: scale(1.1);

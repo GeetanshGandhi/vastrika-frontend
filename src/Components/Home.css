@@ -13,6 +13,9 @@
     border-radius: 20px;
     margin: 0 20px;
     text-decoration: none;
+    @media (max-width: 500px){
+        transform: scale(0.7);
+    }
 }
 .city-image{
     height: 150px;

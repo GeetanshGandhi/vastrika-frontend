@@ -16,14 +16,14 @@ export default function Navbar() {
     }
     return (
         <nav>
-            <div className="wrapper left">
+            <Link to="/" className="nav-left-wrapper">
                 <img id="nav-logo" src={require("../images/logo.webp")} alt="logo" />
                 <h1 className="title-bigletter">V</h1>
                 <div style={{padding:"0"}}>
                     <h1 className="title">astrika</h1>
                     <h2 className="punchline">Threads of Tradition</h2>
                 </div>
-            </div>
+            </Link>
             <div className="search-bar">
                     <img src={require("../images/icons/searchIcon.png")} alt="si"/>
                     <p>I</p>

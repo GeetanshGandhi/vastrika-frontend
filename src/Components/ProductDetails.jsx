@@ -35,6 +35,10 @@ export default function ProductDetails() {
             addbtn.style.borderColor="rgb(0,50,0)"
             setquantity(1)
             return;
+        }
+        if(quantity>state.quantityAvailable){
+            toast.error("Quantity greater than available stock!");
+            return;
         }        
         if(quantity>5){
             toast.error("Can only add upto 5 pieces at a time!");
@@ -53,11 +57,11 @@ export default function ProductDetails() {
         const response = await res.text(); 
         console.log(response);
         if(res.status===500){
-            toast.error("Could not Add state to cart! Please Try again later.")
+            toast.error("Could not Add item to cart! Please Try again later.")
             return;
         }
         if(response==="Exist") {
-            toast.error("This state already exists in your cart!");
+            toast.error("This item already exists in your cart!");
             return;
         }
         qty.style.display="block";
@@ -66,13 +70,11 @@ export default function ProductDetails() {
         addbtn.style.backgroundColor= "rgb(226,255,220)"
         addbtn.style.color="rgb(0,50,0)"
         addbtn.style.borderColor="rgb(0,50,0)"
-        toast.success("state added to cart!")
+        toast.success("Item added to cart!")
     }
     return (
-        <>
-        <p>{JSON.stringify(state)}</p>
         <div className='prod-det-innerwrapper'>
-            <img id='prod-image' src={require("../../../backend/product_images/"+state.productId+".jpg")} alt="" />
+            <img id='prod-image' src={`data:image/png;base64,${state.productImage}`} alt="" />
             <div className="prod-dets">
                 <p className='saree-title'>{state.productName}</p>
                 <p className="city-name">Place of Origin: <span>{state.city.cityName}</span></p>
@@ -86,6 +88,5 @@ export default function ProductDetails() {
                 </div>
             </div>
         </div>
-        </>
     )
 }

@@ -13,6 +13,7 @@ import ProductDetails from './Components/ProductDetails';
 import Cart from './Components/Cart';
 import ExploreCity from './Components/ExploreCity';
 import ExploreVendor from './Components/ExploreVendor';
+import Bill from './Components/Bill';
 function App() {
 	// const [login, setlogin] = useState(null);
 	// useEffect(() => {
@@ -41,6 +42,9 @@ function App() {
 		},
 		{
 			path: '/exploreVendor', element: <><Navbar/><ExploreVendor/></>
+		},
+		{
+			path:'/bill', element: <><Navbar/><Bill/></>
 		}
 	])
 	return (

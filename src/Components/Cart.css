@@ -30,3 +30,22 @@
     font: 20px "Ubuntu", Arial;
     color: grey;
 }
+.checkout-btn{
+    padding: 3px 30px;
+    display:flex;
+    align-items: center;
+    font: 20px Arial;
+    background-color: rgb(158, 236, 158);
+    border: 2px solid rgb(0, 80, 24);
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.checkout-btn:hover{
+    cursor: pointer;
+    background-color: rgb(0, 80, 24);
+    color: white;
+}
+#goahead-icon{
+    height: 20px;
+    margin-left: 10px;
+}

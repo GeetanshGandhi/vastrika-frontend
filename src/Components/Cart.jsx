@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.css'
 import CartItem from './CartItem';
+import { useNavigate } from 'react-router-dom';
 export default function Cart() {
     const [login, setlogin] = useState(null);
     const [cart_items, setCart_items] = useState([]);
@@ -16,7 +17,7 @@ export default function Cart() {
             })
         }
     },[])
-
+    const navigate = useNavigate();
     const removeProductFromCart = (item)=> {
         setCart_items(cart_items.filter((element)=>{
             return element!==item;
@@ -29,18 +30,27 @@ export default function Cart() {
         <p className="gateway-error">Unauthorized Access</p>
         :
         <div className="super-nonflex-container">
-            <p className="login-user">Logged in as: <span className='user-email'>{login.customerEmail}</span></p>
             <p className="cart-head">Cart</p>
+            {   
+            cart_items.length===0?
+            <p className="empty-cart-msg">- Add items to Cart to view them here -</p>
+            :
+            <>
             <div className="cartitem-box">
-                {   
-                    cart_items.length===0?
-                    <p className="empty-cart-msg">- Add items to Cart to view them here -</p>
-                    :
-                    cart_items.map((item)=>{
-                        return <CartItem item={item} removeProduct={removeProductFromCart}/>
-                    })
-                } 
+                {cart_items.map((item)=>{
+                return  <CartItem item={item} removeProduct={removeProductFromCart}/>
+                })
+            }
             </div>
+            <div className="wrapper">
+            <button className='checkout-btn' onClick={()=>navigate("/bill", {state:{fromCart:true}})}>
+                Check Out
+                <img id='goahead-icon' src={require("../images/icons/goaheadIcon.png")} alt="" />
+            </button>
+            </div>
+            </>
+
+            }
         </div>
         }
         </>
