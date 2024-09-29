@@ -1,0 +1,54 @@
+.Container{
+    height: auto;
+    width: 100vw;
+    background-color: #333E49;
+    color: white;
+}
+.block{
+    display: flex;
+}
+table{
+    width: 60vw;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+td, th{
+    text-align: left;
+    height: 40px;
+}
+/*.head{*/
+/*    background-color: #d5d5fd;*/
+/*    margin-top: 40px;*/
+/*}*/
+hr{
+    margin-top: 100px;
+    width: 1350px;
+}
+
+.bottom{
+    width: 1350px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.bottom .contact{
+    text-align: left;
+}
+.bottom .icon img{
+    margin-right: 10px;
+    align-self: center;
+}
+.bottom .Download img{
+    margin-right: 15px;
+}
+.right h3{
+    margin-right: 200px;
+}
+
+.social{
+    margin-left: 60px;
+}
+.social img{
+    margin-left: 20px;
+}
