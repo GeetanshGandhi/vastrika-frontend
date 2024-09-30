@@ -1,4 +1,4 @@
-hmmimport "./Footer.css";
+import "./Footer.css";
 import React from "react";
 import Linkedin from "../Image/LinkedinIcon.svg";
 import Facebook from "../Image/Facebook.svg";
