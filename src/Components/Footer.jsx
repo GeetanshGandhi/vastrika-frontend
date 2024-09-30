@@ -7,13 +7,6 @@ import Youtube from "../Image/Youtube.svg";
 import Insta from "../Image/Insta.svg";
 
 export default function Footer() {
-<<<<<<< HEAD
-	return (
-		<div>
-
-		</div>
-	)
-=======
     const handleRedirect = () => {
         window.location.href = 'https://www.instagram.com/vastrika_threadsoftradition?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D'; // Replace with your Instagram ID
       };
