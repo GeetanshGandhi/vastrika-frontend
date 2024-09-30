@@ -1,10 +1,10 @@
-import "./Footer.css";
+hmmimport "./Footer.css";
 import React from "react";
-import Linkedin from "./LinkedinIcon.svg";
-import Facebook from "./Facebook.svg";
-import Twitter from "./Twitter.svg";
-import Youtube from "./Youtube.svg";
-import Insta from "./Insta.svg";
+import Linkedin from "../Image/LinkedinIcon.svg";
+import Facebook from "../Image/Facebook.svg";
+import Twitter from "../Image/Twitter.svg";
+import Youtube from "../Image/Youtube.svg";
+import Insta from "../Image/Insta.svg";
 
 export default function Footer() {
 <<<<<<< HEAD
