@@ -72,5 +72,4 @@ export default function Footer() {
         <p>&copy;2024 Vastrika.com, All rights reserved</p>
     </div>
   );
->>>>>>> ea129efff85dcc6def6fe3604d8a0c02da5b7d30
 }
