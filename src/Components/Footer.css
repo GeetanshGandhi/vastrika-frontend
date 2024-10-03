@@ -2,6 +2,7 @@
   padding: 20px;
   color: white;
   background-color: #2a0a0a;
+   overflow-x: hidden;
 }
 
 .block {

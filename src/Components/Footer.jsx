@@ -8,7 +8,7 @@ import Insta from "../images/Insta.svg";
 
 export default function Footer() {
   const handleRedirect = () => {
-      window.location.href = 'https://www.instagram.com/vastrika_threadsoftradition?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D'; // Replace with your Instagram ID
+      window.open('https://www.instagram.com/vastrika_threadsoftradition?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D'); // Replace with your Instagram ID
     };
 return (
   <div className="Container">
