@@ -124,9 +124,90 @@ nav{
 .search-bar input:focus{
     outline: none;
 }
-
+.dp-init{
+    background-color: white;
+    font: 17px "Ubuntu", Arial;
+    font-weight: bold;
+    margin-right: 30px;
+    padding: 6px;
+    border: 1px solid rgb(77, 4, 126);
+    border-radius: 50%;
+    transition: all 0.2s ease-out;
+}
+.dp-init:hover{
+    cursor: pointer;
+    background-color: rgb(218, 204, 230);;
+}
+.submenu-wrap{
+    z-index: 100;
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease-out;
+}
+.submenu-open{
+    max-height: 400px;
+}
+.submenu{
+    border: 1px solid purple;
+    background-color: white;
+    border-radius: 7px;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.dp{
+    height: 7vh;
+    margin-right: 10px;
+}
+.profile-info{
+    padding: 5px 0 5px 10px;
+    border-left: 1px solid rgb(201, 201, 201);
+}
+.user-name{
+    font: 3.5vh "Ubuntu", Arial;
+    font-weight: bold;
+}
+.user-add{
+    margin-top: 5px;
+    max-width: 200px;
+    font: 2.5vh "Ubuntu", Arial;
+    color: grey;
+}
+.submenu-link-in{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding: 5px 20px;
+    transition: all 0.2s ease-out;
+}
+.submenu-link-in p:hover{
+    transform: translateX(10px);
+}
+.submenu-link-in:hover{
+    background-color: rgb(253, 231, 255);
+    font-weight: bold;
+}
+.submenu-link-in p{
+    transition: all 0.2s ease-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+.submenu-link{
+    text-decoration: none;
+    font: 3vh "Manrope", Arial;
+    color:blueviolet;
+}
+.submenu-link-img{
+    height:3.5vh;
+    margin-right: 7px;
+}
 .logout-btn{
-    margin-right: 2vw;
+    margin: 3vh 0 3vh 0;
     padding: 3px 17px;
     font: 2.5vh Arial;
     font-weight: bold;
@@ -140,24 +221,4 @@ nav{
     cursor: pointer;
     color: white;
     background-color: rgb(177, 0, 0);
-}
-.cart-link{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-    padding: 4px 10px;
-    transition: all 0.2s ease-out;
-}
-.cart-link:hover{
-    background-color: rgba(255, 255, 255, 0.479);
-    border-radius: 10px;
-}
-#cart-icon{
-    height: 30px;
-    margin-right: 7px;
-}
-.cart-msg{
-    font: 17px "Ubuntu", Arial;
-    color: black;
 }

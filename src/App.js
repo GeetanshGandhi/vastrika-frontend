@@ -14,6 +14,8 @@ import Cart from './Components/Cart';
 import ExploreCity from './Components/ExploreCity';
 import ExploreVendor from './Components/ExploreVendor';
 import Bill from './Components/Bill';
+import MyOrders from './Components/MyOrders';
+import UpdateAddress from './Components/UpdateAddress';
 function App() {
 	// const [login, setlogin] = useState(null);
 	// useEffect(() => {
@@ -45,6 +47,12 @@ function App() {
 		},
 		{
 			path:'/bill', element: <><Navbar/><Bill/></>
+		},
+		{
+			path:'/myOrders', element: <><Navbar/><MyOrders/><Footer/></>
+		},
+		{
+			path:'/updateAdd', element: <><Navbar/><UpdateAddress/><Footer/></>
 		}
 	])
 	return (

@@ -1,0 +1,43 @@
+.update-container{
+    background-color: white;
+    border: 2px solid purple;
+    border-radius: 20px;
+    padding: 20px;
+}
+.updadd-head{
+    text-align: center;
+    font: 5vh "Poppins", Arial;
+    font-weight: bold;
+    color: rgb(82, 0, 82);
+    margin-bottom: 0.3vh;
+}
+.updadd-subhead{
+    font: 2.5vh "Poppins", Arial;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(82, 0, 82, 0.5)  ;
+}
+.updform-ip-wrap{
+    width: 40vw;
+}
+.updform-select-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+}
+.updadd-submit-btn{
+    margin-top: 2vh;
+    padding: 3px 40px;
+    font: 2.5vh "Poppins", Arial;
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid rgb(94, 0, 122);
+    color: rgb(94, 0, 122);
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.updadd-submit-btn:hover{
+    cursor: pointer;
+    background-color: rgb(94, 0, 122);
+    color: white;
+}
