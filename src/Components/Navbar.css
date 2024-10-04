@@ -184,10 +184,7 @@ nav{
     align-items: center;
     border-bottom: 1px solid rgb(223, 223, 223);
     padding: 5px 20px;
-    transition: all 0.2s ease-out;
-}
-.submenu-link-in p:hover{
-    transform: translateX(10px);
+    transition: all 0.05s ease-out;
 }
 .submenu-link-in:hover{
     background-color: rgb(253, 231, 255);
@@ -195,6 +192,9 @@ nav{
 }
 .submenu-link-in p{
     transition: all 0.2s ease-out;
+}
+.submenu-link-in:hover > .submenu-link-in-p{
+    transform: translateX(10px);
 }
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 .submenu-link{

@@ -41,20 +41,20 @@ export default function MyOrders() {
 			<p className="my-ord-head">My Orders</p>
 			<div className="orders-container">
 			{
-				orders.length===0?
-				<p className="no-ord">~Orders Placed by you will be shown here~</p>
-				:
+				!orders || orders.length===0 ?
+				<p>~Orders Placed by you will appear here~</p>
+				: <></>
+			}
+			{
+				orders && orders.length>0 &&
 				orders.map((item)=>{
 					return <div className="order-item">
 						<div className="orditem-top-wrapper">
 							<p className="placed-on">Placed On:<br/>
 								{" "+item["orders"]["orderDateTime"].substring(8, 10)+" "+monthMapping[item["orders"]["orderDateTime"].substring(5, 7)]+", "+item["orders"]["orderDateTime"].substring(0, 4)}
 							</p>
-							<p className="ord-stat">Status: <b><span style={{color:item["orders"]["status"]==="Complete"?"green":"rgb(0, 102, 255)"}}>
-								{item["orders"]["status"]}
-								</span></b></p>
-							<p className="ord-id">Order Id: <u>{item["orders"]["orderId"]}</u></p>
 							<p className="total-amt">Total Amount: <b><br />Rs. {item["orders"]["grandTotal"]}/-</b></p>
+							<p className="ord-id">Order Id: <u>{item["orders"]["orderId"]}</u></p>
 						</div>
 						<hr style={{borderBottom:"1px solid grey"}} />
 						{
@@ -68,15 +68,20 @@ export default function MyOrders() {
 										<div className="ord-prod-img-wrap">
 											<img className='ord-prod-img' src={`data:image/png;base64,${item1.product.productImage}`} alt="prod" />
 										</div>
-										<p className="ord-prod-name">{item1["product"]["productName"]}</p>
+										<div className="ord-prod-mid-wrap">
+											<p className="ord-prod-name">{item1["product"]["productName"]}</p>
+											<div className="wrapper">
+												<button onClick={()=>navigate("/productDetails", {state:item1["product"]})} className='in-ord-btns view-prod'>View Product</button>
+												{
+													item["orders"]["status"]==="Complete" && 
+													<button className='in-ord-btns review-prod'>Review Product</button>
+												}
+											</div>
+										</div>
 										<div className="ord-prod-right-wrap">
-											<p className="ord-prod-qty">Qty: {item1["quantity"]}</p>
-											<button onClick={()=>navigate("/productDetails", {state:item1["product"]})} className='in-ord-btns view-prod'>View Product</button>
-											{
-												item["orders"]["status"]==="Complete" &&
-												<button className='in-ord-btns review-prod'>Review Product</button>
-
-											}
+											<p className="ord-prod-qty">Qty: {item1["quantity"]} @ Rs. {item1["rate"]}/-</p>
+											<p className="ord-prod-remark">{item1["remark"]}</p>
+											<button className='cancel-prodord-btn'>Cancel</button>
 										</div>
 									</div>
 								})

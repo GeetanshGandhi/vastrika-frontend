@@ -77,21 +77,34 @@
     color: rgb(131, 0, 207);
     width: 100%;
 }
+.ord-prod-mid-wrap{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .ord-prod-right-wrap{
-    width: 25%;
+    width: 30%;
     border-left: 1px solid rgb(190, 190, 190);
-    padding: 1vh 1vw;
+    padding: 1vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .ord-prod-qty{
     text-align: center;
     font: 3vh "Ubuntu", Arial;
     color: grey;
-    margin-bottom: 2vh;
+}
+.ord-prod-remark{
+    font: 17px "Poppins", Arial;
+    font-weight: bold;
+    color: rgba(82, 0, 82, 0.767);
 }
 .in-ord-btns{
-    width: 100%;
-    margin: 0.7vh 0;
-    padding: 3px 0;
+    margin: 0.7vh 0.2vw;
+    padding: 3px 40px;
     font: 2vh "Poppins", Arial;
     font-weight: bold;
     border-radius: 10px;
@@ -114,4 +127,18 @@
     cursor: pointer;
     color: white;
     background-color: rgb(148, 145, 0);
+}
+.cancel-prodord-btn{
+    padding: 3px 30px;
+    font: 14px Arial;
+    font-weight: bold;
+    background-color: rgb(255, 225, 225);
+    border: 2px solid rgb(179, 0, 0);
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.cancel-prodord-btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(179, 0, 0);
 }

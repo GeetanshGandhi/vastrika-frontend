@@ -58,19 +58,19 @@ export default function Navbar() {
                 <Link className='submenu-link' to='/myOrders'>
                     <div className="submenu-link-in">
                     <img className='submenu-link-img' src={require("../images/icons/orderIcon.png")} alt="loc" />
-                        <p>My Orders</p>
+                        <p className='submenu-link-in-p'>My Orders</p>
                     </div>
                 </Link>
                 <Link className='submenu-link' to='/updateAdd'>
                     <div className="submenu-link-in">
                         <img className='submenu-link-img' src={require("../images/icons/locationIcon.png")} alt="loc" />
-                        <p>Update Address</p>
+                        <p className='submenu-link-in-p'>Update Address</p>
                     </div>
                 </Link>
                 <Link className='submenu-link'to='/cart'>
                     <div className="submenu-link-in">
                         <img className='submenu-link-img' src={require("../images/icons/cartIcon.png")} alt="loc" />
-                        <p>Your Cart</p>
+                        <p className='submenu-link-in-p'>Your Cart</p>
                     </div>
                 </Link>
                 <div className="wrapper">

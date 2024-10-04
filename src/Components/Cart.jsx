@@ -23,6 +23,16 @@ export default function Cart() {
             return element!==item;
         }))
     }
+    const updateQuantity = (cartItem, newQty)=>{
+        for(let i = 0; i<cart_items.length; i++){
+            if(cart_items[i]["product"]["productId"]===cartItem["product"]["productId"] && cart_items[i]["customer"]["customerEmail"]===cartItem["customer"]["customerEmail"]){
+                console.log("hello")
+                cart_items[i]["quantity"] = newQty;
+                console.log(cart_items[i]["quantity"])
+                break;
+            }
+        }
+    }
     return (
         <>
         {
@@ -38,7 +48,7 @@ export default function Cart() {
             <>
             <div className="cartitem-box">
                 {cart_items.map((item)=>{
-                return  <CartItem item={item} removeProduct={removeProductFromCart}/>
+                return  <CartItem item={item} removeProduct={removeProductFromCart} updateQuantity={updateQuantity}/>
                 })
             }
             </div>

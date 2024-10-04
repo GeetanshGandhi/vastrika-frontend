@@ -7,13 +7,18 @@
     transition: all 0.2s ease-out;
 }
 .cartitem-img{
-    width: 150px;
+    width: 100px;
     border: 1px solid rgb(201, 201, 201);
 }
 .cartitem-name{
     margin-top: 10px;
     text-align: center;
     font: 20px Arial;
+}
+.cartitem-qty{
+    text-align: center;
+    font: 15px "Ubuntu", Arial;
+    color: grey;
 }
 .cartitem-remove-btn{
     margin-top: 10px;
@@ -31,4 +36,47 @@
     background-color: red;
     color: white;
     transform: scale(1.1);
+}
+.cartitem-edit-btn{
+    margin: 10px 0 0 0;
+    padding: 3px 0;
+    width: 100%;
+    font: 17px Arial;
+    font-weight: bold;
+    background-color: rgb(193, 255, 181);
+    border: 2px solid rgb(0, 90, 15);
+    border-radius: 10px;
+    transition: all 0.2s ease-out;
+}
+.cartitem-edit-btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 90, 15);
+}
+.set-qty-wrap{
+    margin-top: 10px;
+    display: none;
+}
+.set-qty-msg{
+    font: 15px "Ubuntu",Arial;
+    margin-right: 5px;
+}
+#updated-qty{
+    padding: 5px;
+}
+.update-qty-btn{
+    margin: 5px 0;
+    font: 15px Arial;
+    font-weight: bold;
+    padding: 2px 10px;
+    background-color: white;
+    border: 2px solid rgb(0, 117, 72);
+    border-radius: 5px;
+    background-color: rgb(206, 255, 248);
+    transition: all 0.2s ease-out;
+}
+.update-qty-btn:hover{
+    cursor: pointer;
+    background-color: rgb(0, 117, 72);
+    color: white;
 }

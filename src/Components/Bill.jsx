@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import './Bill.css'
 import { toast } from 'react-toastify';
 export default function Bill(props) {
@@ -51,6 +51,7 @@ export default function Bill(props) {
             codbtn.style.display = "none"
         }
     }
+    const navigate = useNavigate()
     const completeOrderWithCOD = async()=>{
         let newOrderData = {
             cartItems : prodToBuy, subTotal: subtot, 
@@ -60,9 +61,14 @@ export default function Bill(props) {
             method: 'POST', body: JSON.stringify(newOrderData),
             headers : {"content-type":"application/json"}
         })
-        const reply = res.text()
+        const reply = await res.text()
         if(reply === "Success"){
             toast.success("Order Placed Successfully!");
+            navigate("/myOrders");
+        }
+        else{
+            toast.error(reply);
+            navigate(-1);
         }
     }
     const gotoPayments = ()=>{
