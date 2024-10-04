@@ -42,10 +42,7 @@ export default function Navbar() {
             {
                 login!==null &&
                 <>
-            {/* <div className="dp-wrap"> */}
                 <p onClick={toggleSubmenu}className="dp-init">{login["firstName"].substring(0,1)+login["lastName"].substring(0,1)}</p>
-                {/* <img onClick={toggleSubmenu} className='hamburger-icn' src={require("../images/icons/hamburger.webp")} alt="hbg" /> */}
-            {/* </div> */}
             <div className="submenu-wrap" id="subMenuWrap"><div className="submenu">
                 <div className="profile">
                     <img className='dp' src={require("../images/icons/profilepic.png")} alt="dp" />
