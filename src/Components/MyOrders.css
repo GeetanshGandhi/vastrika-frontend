@@ -98,6 +98,8 @@
     color: grey;
 }
 .ord-prod-remark{
+    text-align: center;
+    margin: 0 1vw;
     font: 17px "Poppins", Arial;
     font-weight: bold;
     color: rgba(82, 0, 82, 0.767);
@@ -141,4 +143,24 @@
     cursor: pointer;
     color: white;
     background-color: rgb(179, 0, 0);
+}
+.reason-wrap{
+    display: none;
+    width: 100%;
+    padding: 0px 1vw;
+}
+.reason{
+    font: 2vh "Ubuntu", Arial;
+    text-align: center;
+    margin-bottom: 0.5vh;
+}
+#reason-ip{
+    width: 100%;
+    font: 2.5vh "Poppins", Arial;
+    padding: 5px;
+    border: 2px solid purple;
+}
+#reason-ip:focus{
+    outline: none;
+    border-radius: 10px;
 }
