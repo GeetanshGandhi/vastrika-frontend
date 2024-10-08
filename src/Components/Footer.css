@@ -1,25 +1,44 @@
-.Container {
-  padding: 20px;
-  color: white;
-  background-color: #2a0a0a;
+.container-footer{
+    width: 98.8vw;
+    height: auto;
+    background-color: rgb(44, 5, 5);
+    color: white;
+    overflow-x: hidden;
+    /* display: flex; */
+    padding: 30px, 0px;
 }
 
-.block {
+.list{
+    width: 60vw;
+    height: auto;
+    display: flex;
+    overflow-x: hidden;
+}
+.top-footer{
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Allow wrapping for small screens */
-  padding: 20px 0;
 }
 
-.left {
-  width: 50%;
+.head{
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
 }
 
-.left th,td{
-  text-align: left;
+ul{
+  list-style-type: none;
 }
+
+.col-1,.col-2,.col-3{
+    width: 20vw;
+    padding-left: 20px;
+}
+
+
+
 .right {
   width: 30%;
+  padding-left: 100px;
 }
 
 .right h3 {
@@ -37,43 +56,73 @@ hr {
   border: none;
 }
 
-/* Media Query for Tablets and Smaller Screens */
-@media screen and (max-width: 768px) {
-  .block {
-    flex-direction: column;
+/* Media query for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .container-footer {
+      height: auto;
+      padding-top: 20px;
   }
-  
-  .left {
-    width: 100%;
-    margin-bottom: 20px; /* Spacing between sections */
+
+  .list {
+      /* flex-direction: column; */
+      /* align-items: center; */
+      width: 100vw;
+      height: auto;
   }
-  
+
+  .col-1, .col-2, .col-3 {
+      width: 90%;
+      padding-left: 20px;
+      /* text-align: center; */
+      margin-bottom: 20px;
+  }
+
   .right {
-    width: 100%;
-    text-align: center;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
   }
-  
-  .social img {
-    width: 30px; /* Adjust icon size for smaller screens */
+
+  .top-footer {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  hr {
+      width: 90%;
+      margin: 20px auto;
+  }
+
+  p {
+      margin-left: 0;
+      text-align: center;
   }
 }
 
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 576px) {
+/* Media query for small devices (max-width: 480px) */
+@media (max-width: 480px) {
   .social img {
-    width: 25px;
+      width: 30px;
+      margin-right: 5px;
   }
-  
-  table {
-    font-size: 14px; /* Adjust table font size for small screens */
+
+  .head {
+      font-size: 15px;
   }
-  
-  .left, .right {
-    width: 100%;
-    text-align: center;
+
+  .col-1, .col-2, .col-3 {
+      width: 100%;
   }
-  
-  .block {
-    justify-content: center;
+
+  .right {
+      width: 100%;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  hr {
+      width: 100%;
   }
 }
