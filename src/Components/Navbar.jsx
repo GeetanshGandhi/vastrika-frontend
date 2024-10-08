@@ -14,6 +14,9 @@ export default function Navbar() {
         navigate("/")
         window.location.reload();
     }
+    const toggleSubmenu = ()=> {
+        document.getElementById("subMenuWrap").classList.toggle("submenu-open");
+    }
     return (
         <nav>
             <Link to="/" className="nav-left-wrapper">
@@ -25,26 +28,54 @@ export default function Navbar() {
                 </div>
             </Link>
             <div className="search-bar">
-                    <img src={require("../images/icons/searchIcon.png")} alt="si"/>
-                    <p>I</p>
-                    <input placeholder="Search for an item or more..." id="search-inp" name="search-inp"/>
-                </div>
-            <div className="right">
-                {
-                login===null?
-                <>
-                    <button onClick={()=>navigate("/custLogin")} className='gotologin-btn'>Login</button>
-                    <Link className="gotoregister-link" to='/custRegister'>Register</Link>
-                </>
-                :<div className='wrapper'>
-                    <Link className='cart-link' to="/cart">
-                        <img id='cart-icon' src={require("../images/icons/cartIcon.png")} alt="" />
-                        <p className="cart-msg">Your cart</p>
-                    </Link>
-                    <button onClick={dologout} className="logout-btn">Log out</button>
-                </div>
-                }
+                <img src={require("../images/icons/searchIcon.png")} alt="si"/>
+                <p>I</p>
+                <input placeholder="Search for an item or more..." id="search-inp" name="search-inp"/>
             </div>
+            {
+            login===null &&
+            <div className='right'>
+                <button onClick={()=>navigate("/custLogin")} className='gotologin-btn'>Login</button>
+                <Link className="gotoregister-link" to='/custRegister'>Register</Link>
+            </div>
+            }
+            {
+                login!==null &&
+                <>
+                <p onClick={toggleSubmenu}className="dp-init">{login["firstName"].substring(0,1)+login["lastName"].substring(0,1)}</p>
+            <div className="submenu-wrap" id="subMenuWrap"><div className="submenu">
+                <div className="profile">
+                    <img className='dp' src={require("../images/icons/profilepic.png")} alt="dp" />
+                    <div className="profile-info">
+                        <p className="user-name">{login["firstName"]+" "+login["lastName"]}</p>
+                        <p className="user-add">{login["houseNumber"]+", "+login["streetBuildingName"]+", "+login["landmark"]+", "+login["city"]+", "+login["state"]}</p>
+                    </div>
+                </div>
+                <hr style={{borderBottom:"1px solid rgb(223,223,223)"}}/>
+                <Link className='submenu-link' to='/myOrders'>
+                    <div className="submenu-link-in">
+                    <img className='submenu-link-img' src={require("../images/icons/orderIcon.png")} alt="loc" />
+                        <p className='submenu-link-in-p'>My Orders</p>
+                    </div>
+                </Link>
+                <Link className='submenu-link' to='/updateAdd'>
+                    <div className="submenu-link-in">
+                        <img className='submenu-link-img' src={require("../images/icons/locationIcon.png")} alt="loc" />
+                        <p className='submenu-link-in-p'>Update Address</p>
+                    </div>
+                </Link>
+                <Link className='submenu-link'to='/cart'>
+                    <div className="submenu-link-in">
+                        <img className='submenu-link-img' src={require("../images/icons/cartIcon.png")} alt="loc" />
+                        <p className='submenu-link-in-p'>Your Cart</p>
+                    </div>
+                </Link>
+                <div className="wrapper">
+                    <button className='logout-btn' onClick={dologout}>Log Out</button>
+                </div>
+            </div></div>
+                </>
+            }
         </nav>
     )
 }

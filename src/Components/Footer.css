@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container-footer{
     width: 98.8vw;
     height: auto;
@@ -6,6 +7,13 @@
     overflow-x: hidden;
     /* display: flex; */
     padding: 30px, 0px;
+=======
+.Container {
+  padding: 20px;
+  color: white;
+  background-color: #2a0a0a;
+   overflow-x: hidden;
+>>>>>>> 35a1767668c2fe111cb156348750a1033df082cb
 }
 
 .list{
@@ -117,6 +125,7 @@ hr {
   .right {
       width: 100%;
   }
+<<<<<<< HEAD
 
   p {
       font-size: 14px;
@@ -125,4 +134,6 @@ hr {
   hr {
       width: 100%;
   }
+=======
+>>>>>>> 35a1767668c2fe111cb156348750a1033df082cb
 }
