@@ -1,4 +1,6 @@
+// const cityToPinCodeMap
 const cityPop = {
-    "452001": [5,7,8]
+    "221001": [4,5],
+    "605036": [6, 13]
 }
 export default cityPop

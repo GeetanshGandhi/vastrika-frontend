@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './ExploreCity.css'
 import ProductItem from './ProductItem';
 import { Link, useLocation } from 'react-router-dom'
-import cityPopularProducts from '../cityPopularProducts';
 import cityPop from '../cityPopularProducts';
 export default function ExploreCity() {
 	const { state} = useLocation();
@@ -14,14 +13,17 @@ export default function ExploreCity() {
 			method: "POST", body: city["pinCode"],
 			headers: {"content-type":"application/json"}
 		}).then((res)=>res.json()).then((data)=>setBusinesses(data))
-		.then(()=>{
+	},[city])
+	useEffect(()=>{
+		console.log("3rd effect")
+		if(businesses[0] && businesses[0].city && businesses[0].city.pinCode && businesses[0].city.pinCode!==null){
 			fetch(process.env.REACT_APP_BACKEND+"product/getByIds",{
 				method: "POST",
-				body: JSON.stringify(cityPop["452001"]),
+				body: JSON.stringify(cityPop[businesses[0].city.pinCode]),
 				headers: {"content-type":"application/json"}
 			}).then((res)=>res.json()).then((data)=>setPopProds(data))
-		})
-	},[city])
+		}
+	},[businesses])
 	return (
 		<div className='super-nonflex-container'>
 			<div className="explore-city-title-wrapper">
@@ -30,7 +32,7 @@ export default function ExploreCity() {
 				</div>
 				<p className='explore-cityname'>{city["cityName"]}</p>
 			</div>
-			<p className="explore-citydesc">city["description"] Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa commodi repellendus omnis distinctio asperiores ut sapiente esse doloribus quis libero suscipit nam quam doloremque fugiat totam temporibus ab, facere quidem, accusantium dolor facilis architecto laudantium nesciunt qui. Dolores placeat odio porro minus. Dolor, magni corporis. In ipsa accusamus modi saepe porro, recusandae itaque ullam error cumque excepturi! Voluptatibus maiores laborum rerum sed similique quos? Doloremque sunt dolore fugit magnam soluta!</p>
+			<p className="explore-citydesc">{city["description"]}</p>
 			{
 				popProds.length!==0 &&
 				<>

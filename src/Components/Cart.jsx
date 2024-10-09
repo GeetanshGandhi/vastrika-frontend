@@ -26,7 +26,6 @@ export default function Cart() {
     const updateQuantity = (cartItem, newQty)=>{
         for(let i = 0; i<cart_items.length; i++){
             if(cart_items[i]["product"]["productId"]===cartItem["product"]["productId"] && cart_items[i]["customer"]["customerEmail"]===cartItem["customer"]["customerEmail"]){
-                console.log("hello")
                 cart_items[i]["quantity"] = newQty;
                 console.log(cart_items[i]["quantity"])
                 break;

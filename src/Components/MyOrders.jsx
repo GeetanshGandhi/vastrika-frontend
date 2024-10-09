@@ -126,7 +126,7 @@ export default function MyOrders() {
 			{
 				orders && orders.length>0 &&
 				orders.map((item)=>{
-					return <div className="order-item" role={item.orderId}>
+					return <div className="wrapper"><div className="order-item" role={item.orderId}>
 						<div className="orditem-top-wrapper">
 							<p className="placed-on">Placed On:<br/>
 								{" "+item["orders"]["orderDateTime"].substring(8, 10)+" "+monthMapping[item["orders"]["orderDateTime"].substring(5, 7)]+", "+item["orders"]["orderDateTime"].substring(0, 4)}
@@ -180,7 +180,7 @@ export default function MyOrders() {
 							<img onClick={(e)=>handleToggleExpansionOfOrder(e, item["orders"]["orderId"])}
 								className='expand-btn' src={require("../images/icons/plusIcon.png")} alt="pl" />
 						</div>						
-					</div>
+					</div></div>
 				})
 			}
 			</div>

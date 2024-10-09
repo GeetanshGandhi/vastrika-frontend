@@ -6,13 +6,12 @@
 }
 .orders-container{
     padding: 2vh 1vw;
-    display: flex;
-    justify-content: center;
 }
 .order-item{
+    margin: 20px 0;
+    padding: 20px;
     width: 80%;
     background-color: white;
-    padding: 20px;
     border: 1px solid rgb(223, 203, 228);
     border-radius: 20px;
     transition: all 0.2s ease-out;

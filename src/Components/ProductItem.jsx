@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './ProductItem.css'
 import Popup from 'reactjs-popup'
 import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
 export default function ProductItem({item, itemState}) {
     const [login, setlogin] = useState(null)
     useEffect(()=>{
@@ -16,6 +15,10 @@ export default function ProductItem({item, itemState}) {
     }
     return (
         <div onClick={handleGoToProduct} className='prod-item-container'>
+            {
+                item["quantityAvailable"]<10 &&
+                <span className="stock-alert">Only {item["quantityAvailable"]} left</span>
+            }
             <Popup trigger={
                 <div className="wrapper">
                     <img className='prod-img' src={`data:image/png;base64,${item.productImage}`} alt="pritem" />    
@@ -43,12 +46,6 @@ export default function ProductItem({item, itemState}) {
             <div className="wrapper">
                 <p className="orig-price">₹{item["price"]}/-</p>
             </div>            
-            }
-            {
-                item["quantityAvailable"]<30?
-            <div className='wrapper'>
-                <p className="stock-alert">Only {item["quantityAvailable"]} left</p>
-            </div> :<></>
             }
         </div>
     )
