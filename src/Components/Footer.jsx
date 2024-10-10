@@ -1,13 +1,7 @@
 import React from 'react'
-
+import './Footer.css'
 export default function Footer() {
-<<<<<<< HEAD
-  return (
-    <div>
-      
-    </div>
-  )
-=======
+
     const handleRedirectInsta = () => {
         window.open('https://www.instagram.com/vastrika_threadsoftradition?utm_source=qr&igsh=MzNlNGNkZWQ4Mg%3D%3D'); // Replace with your Instagram ID
       };
@@ -61,11 +55,11 @@ export default function Footer() {
       <div className="right">
        <h3>Social : </h3>
         <div className="social">
-          <img src={Linkedin} alt="" />
-          <img src={Facebook} alt="" onClick={handleRedirectFacebook}/>
-          <img src={Insta} alt="" onClick={handleRedirectInsta}/>
-          <img src={Twitter} alt="" />
-          <img src={Youtube} alt="" />
+          <img src={require("../images/LinkedinIcon.svg")} alt="li" />
+          <img src={require("../images/Facebook.svg")} alt="fb" onClick={handleRedirectFacebook}/>
+          <img src={require("../images/Insta.svg")} alt="ig" onClick={handleRedirectInsta}/>
+          <img src={require("../images/Twitter.svg")} alt="tw" />
+          <img src={require("../images/Youtube.svg")} alt="yt" />
         </div>
       </div>
       </div>
@@ -80,5 +74,4 @@ export default function Footer() {
        }}>&copy;2024 Vastrika.com, All rights reserved</p>
     </div>
 );
->>>>>>> c989a144be49f53e0301158895e4b1115e426c1f
 }

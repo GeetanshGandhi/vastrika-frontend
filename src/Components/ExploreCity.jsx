@@ -4,7 +4,7 @@ import ProductItem from './ProductItem';
 import { Link, useLocation } from 'react-router-dom'
 import cityPop from '../cityPopularProducts';
 export default function ExploreCity() {
-	const { state} = useLocation();
+	const { state } = useLocation();
 	const city = state["city"];
 	const [businesses, setBusinesses] = useState([])
 	const [popProds, setPopProds] = useState([])

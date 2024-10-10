@@ -25,8 +25,8 @@ nav{
     }
 }
 #nav-logo{
-    height: 12vh;
-    margin: 0 5px 0 10px;
+    height: 10vh;
+    margin: 0 10px 0 10px;
     @media (max-width: 500px ){
         margin: 0 0 0 0;
     }
