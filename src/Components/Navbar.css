@@ -222,3 +222,30 @@ nav{
     color: white;
     background-color: rgb(177, 0, 0);
 }
+.nolog-home-link{
+    text-decoration: none;
+    font: 2.7vh "Ubuntu", Arial;
+    color: rgb(87, 0, 168);
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+}
+.nolog-home-link:hover{
+    transform: scale(1.1);
+    background-color: rgb(255,255,255,0.5);
+}
+.home-link{
+    margin: 0 30px 0 0;
+    text-decoration: none;
+    font: 2.7vh "Ubuntu", Arial;
+    color: rgb(87, 0, 168);
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease-out;
+}
+.home-link:hover{
+    transform: scale(1.1);
+    background-color: rgb(255,255,255,0.5);
+}

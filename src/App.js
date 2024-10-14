@@ -16,6 +16,7 @@ import ExploreVendor from './Components/ExploreVendor';
 import Bill from './Components/Bill';
 import MyOrders from './Components/MyOrders';
 import UpdateAddress from './Components/UpdateAddress';
+import UpdatePhone from './Components/UpdatePhone';
 function App() {
 	// const [login, setlogin] = useState(null);
 	// useEffect(() => {
@@ -53,6 +54,9 @@ function App() {
 		},
 		{
 			path:'/updateAdd', element: <><Navbar/><UpdateAddress/><Footer/></>
+		},
+		{
+			path:'/updatePhn', element: <><Navbar/><UpdatePhone/><Footer/></>
 		}
 	])
 	return (

@@ -16,8 +16,11 @@ export default function ProductItem({item, itemState}) {
     return (
         <div onClick={handleGoToProduct} className='prod-item-container'>
             {
-                item["quantityAvailable"]<10 &&
+                item["quantityAvailable"]===0?
+                <span className="stock-alert">Sold Out</span> :
+                item["quantityAvailable"]<10 ?
                 <span className="stock-alert">Only {item["quantityAvailable"]} left</span>
+                : <></>
             }
             <Popup trigger={
                 <div className="wrapper">

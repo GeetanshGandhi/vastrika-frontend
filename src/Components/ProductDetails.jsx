@@ -73,20 +73,41 @@ export default function ProductDetails() {
         toast.success("Item added to cart!")
     }
     return (
+        <div className="prod-det-wrapper">
         <div className='prod-det-innerwrapper'>
             <img id='prod-image' src={`data:image/png;base64,${state.productImage}`} alt="" />
             <div className="prod-dets">
                 <p className='saree-title'>{state.productName}</p>
+                <p className="det-price">{
+                    state.discount===0?
+                    <span className='disc-new-price'>{state.price}</span>
+                    :<div className='wrapper'>
+                        <p className="disc-old-price">Rs. {state.price}/-</p>
+                        <p className="disc-new-price">Rs. {Math.floor(state.price - (state.discount*state.price/100))}/-</p>
+                    </div>
+                }
+                </p>
                 <p className="city-name">Place of Origin: <span>{state.city.cityName}</span></p>
-                <p className="saree-desc">{state.description}</p>
+                <p className="addon-info"><b>Material:</b> {state.material}</p>
+                <p className="addon-info"><b>Occasion Type:</b> {state.occasion}</p>
+                <p className="addon-info"><b>Blouse Fabric Included:</b> {state.blousePiece?"Yes":"No"}</p>
+                <p className="addon-info"><b>Length:</b> {state.length} meters</p>
+                <p className="addon-info"><b>Pattern</b> {state.pattern}</p>
                 <div className="wrapper">
                     <p className="select-qty-msg">Select Quantity (less than 5) to add: </p>
                     <input onChange={(e)=>handleChangeQty(e)} type="number" id='quantity-ip' min='1' max='5'/>
                 </div>
-                <div className="wrapper">
-                    <button onClick={handleAddToCartClick} className='addtocart-btn'>Add to Cart</button>
-                </div>
-            </div>
+                {
+                    state.quantityAvailable===0?
+                    <p className="unavailable">Currently Unavailable</p>
+                    :<div className="wrapper">
+                        <button onClick={handleAddToCartClick} className='addtocart-btn'>Add to Cart</button>
+                    </div>
+                }
+            </div>       
+        </div>
+        <p className="prod-desc-head">Product Description:</p>
+        <p className="saree-desc">{state.description}</p> 
         </div>
     )
 }

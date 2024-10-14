@@ -44,7 +44,9 @@ export default function Home() {
 								return city["pinCode"]!=="000000"
 							}).map((city)=>{
 								return <Link className='city-item' to="./exploreCity" state={{city: city}}>
-									<img className='city-image'  src={`data:image/png;base64,${city.icon}`} alt="" />
+									<div className="wrapper">
+										<img className='city-image'  src={`data:image/png;base64,${city.icon}`} alt="" />
+									</div>
 									<p className="cityitem-name">{city["cityName"]}</p>
 								</Link>
 							})

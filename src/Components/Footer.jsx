@@ -1,5 +1,10 @@
 import React from 'react'
 import './Footer.css'
+import Linkedin from "../images/LinkedinIcon.svg";
+import Facebook from "../images/Facebook.svg";
+import Twitter from "../images/Twitter.svg";
+import Youtube from "../images/Youtube.svg";
+import Insta from "../images/Insta.svg";
 export default function Footer() {
 
     const handleRedirectInsta = () => {
@@ -55,11 +60,11 @@ export default function Footer() {
       <div className="right">
        <h3>Social : </h3>
         <div className="social">
-          <img src={require("../images/LinkedinIcon.svg")} alt="li" />
-          <img src={require("../images/Facebook.svg")} alt="fb" onClick={handleRedirectFacebook}/>
-          <img src={require("../images/Insta.svg")} alt="ig" onClick={handleRedirectInsta}/>
-          <img src={require("../images/Twitter.svg")} alt="tw" />
-          <img src={require("../images/Youtube.svg")} alt="yt" />
+          <img src={Linkedin} alt="li" />
+          <img src={Facebook} alt="fb" onClick={handleRedirectFacebook}/>
+          <img src={Insta} alt="ig" onClick={handleRedirectInsta}/>
+          <img src={Twitter} alt="tw" />
+          <img src={Youtube} alt="yt" />
         </div>
       </div>
       </div>

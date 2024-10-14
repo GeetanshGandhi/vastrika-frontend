@@ -35,6 +35,7 @@ export default function Navbar() {
             {
             login===null &&
             <div className='right'>
+                <Link className="nolog-home-link" to="/">Home</Link>
                 <button onClick={()=>navigate("/custLogin")} className='gotologin-btn'>Login</button>
                 <Link className="gotoregister-link" to='/custRegister'>Register</Link>
             </div>
@@ -42,7 +43,10 @@ export default function Navbar() {
             {
                 login!==null &&
                 <>
-                <p onClick={toggleSubmenu}className="dp-init">{login["firstName"].substring(0,1)+login["lastName"].substring(0,1)}</p>
+                <div className='wrapper'>
+                    <Link className="home-link" to="/">Home</Link>
+                    <p onClick={toggleSubmenu}className="dp-init">{login["firstName"].substring(0,1)+login["lastName"].substring(0,1)}</p>
+                </div>
             <div className="submenu-wrap" id="subMenuWrap"><div className="submenu">
                 <div className="profile">
                     <img className='dp' src={require("../images/icons/profilepic.png")} alt="dp" />
@@ -62,6 +66,12 @@ export default function Navbar() {
                     <div className="submenu-link-in">
                         <img className='submenu-link-img' src={require("../images/icons/locationIcon.png")} alt="loc" />
                         <p className='submenu-link-in-p'>Update Address</p>
+                    </div>
+                </Link>
+                <Link className='submenu-link' to='/updatePhn'>
+                    <div className="submenu-link-in">
+                        <img className='submenu-link-img' src={require("../images/icons/phoneIcon.png")} alt="loc" />
+                        <p className='submenu-link-in-p'>Update Phone Number</p>
                     </div>
                 </Link>
                 <Link className='submenu-link'to='/cart'>

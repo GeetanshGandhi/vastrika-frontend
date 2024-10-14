@@ -8,10 +8,13 @@
 }
 #prod-image{
     height: 70vh;
-    margin: 30px 0 30px 30px;
+    margin: 30px 40px 30px 30px;
     border: 1px solid grey;
 }
 .prod-dets{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 30px 0 0 50px;
     width: 750px;
 }
@@ -20,19 +23,42 @@
     font: 30px "Space Grotesk";
     font-weight: bold;
 }
+.disc-old-price{
+    margin: 10px 10px 0 0;
+    text-decoration: line-through;
+    font: 3.5vh "Ubuntu", Arial;
+    color: grey;
+}
+.disc-new-price{
+    margin: 10px 0 0 0;
+    font: 4vh "Ubuntu", Arial;
+    font-weight: bold;
+    color: rgb(0, 156, 21);
+}
+.prod-desc-head{
+    margin: 0 20px;
+    font: 3vh "Poppins", Arial;
+}
 .saree-desc{
-    margin: 20px 0;
+    margin: 10px 0 20px 20px;
     font: 20px Arial;
     color: grey;
 }
 .city-name{
-    text-align: center;
     font: 30px "Poppins";
     color: grey;
 }
 .city-name span{
     font-weight: bold;
     color: rgb(143, 0, 187);
+}
+.addon-info{
+    font: 2.6vh "Poppins", Arial;
+}
+.unavailable{
+    text-align: center;
+    font: 3vh "Poppins", Arial;
+    color: red; 
 }
 .addtocart-btn{
     margin: 20px 0;
