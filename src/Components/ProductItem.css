@@ -3,7 +3,7 @@
 .prod-item-container{
     margin: 4vh 1vw;
     width: 220px;
-    height: 55vh;
+    height: 59vh;
     padding: 20px;
     background-color: white;
     border: 1px solid grey;
@@ -52,7 +52,13 @@
     margin-top: 10px;
     text-align: center;
     font: 20px "Suse",Arial;
-    font-weight: bold;
+    font-weight: bold;        
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	max-height: 8vh;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .price{
     margin-bottom: 7px;

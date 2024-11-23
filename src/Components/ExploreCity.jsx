@@ -15,7 +15,6 @@ export default function ExploreCity() {
 		}).then((res)=>res.json()).then((data)=>setBusinesses(data))
 	},[city])
 	useEffect(()=>{
-		console.log("3rd effect")
 		if(businesses[0] && businesses[0].city && businesses[0].city.pinCode && businesses[0].city.pinCode!==null){
 			fetch(process.env.REACT_APP_BACKEND+"product/getByIds",{
 				method: "POST",
@@ -34,7 +33,7 @@ export default function ExploreCity() {
 			</div>
 			<p className="explore-citydesc">{city["description"]}</p>
 			{
-				popProds.length!==0 &&
+				popProds && popProds!==null && popProds.length!==0 &&
 				<>
 				<p className="vendor-head">Popular Products from {city["cityName"]}</p>
 				<div className="vendor-container">
