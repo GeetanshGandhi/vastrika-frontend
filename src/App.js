@@ -1,6 +1,6 @@
 // import { useEffect, useState } from 'react';
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
@@ -24,7 +24,7 @@ function App() {
 	// 		setlogin(JSON.parse(localStorage.getItem("slelologindata")));
 	// 	}
 	// }, [])
-	const router = createBrowserRouter([
+	const router = createHashRouter([
 		{
 			path:'/', element: <><Navbar/><Home/><Footer/></>
 		},
