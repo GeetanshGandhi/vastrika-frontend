@@ -35,6 +35,11 @@
     font-weight: bold;
     color: rgb(0, 156, 21);
 }
+.notax{
+    margin-left: 20px;
+    color:grey;
+    font: 13px "Ubuntu", Arial;
+}
 .prod-desc-head{
     margin: 0 20px;
     font: 3vh "Poppins", Arial;

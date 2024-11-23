@@ -7,8 +7,6 @@ export default function Bill(props) {
     const [login, setlogin] = useState(null)
     const {state} = useLocation();
     const [prodToBuy, setProdToBuy] = useState([]);
-    const [subtot, setSubtot] = useState(0)
-    const [tax, setTax] = useState(0)
     const [grdtot, setGrdtot] = useState(0)
     useEffect(()=>{
         if(localStorage.getItem("vastrikaUser")!==null) {
@@ -21,25 +19,18 @@ export default function Bill(props) {
             body: localStorage.getItem("vastrikaUser"),
             method: "POST"
         }).then((res)=>res.json()).then((data)=>{
-            let sub = 0
             let grd = 0
-            let tex = 0
             for(let i = 0; i<data.length; i++){
                 let curr = data[i]["product"]
-                sub+=Math.floor((curr["price"] - (curr["price"]*curr["discount"]/100))*data[i]["quantity"])
+                grd+=Math.floor((curr["price"] - (curr["price"]*curr["discount"]/100))*data[i]["quantity"])
             }
-            tex = Math.round(0.05*sub*100)/100
-            grd = tex+sub
             setProdToBuy(data);
             setGrdtot(grd)
-            setSubtot(sub)
-            setTax(tex)
         })
     },[login])
     const [paymeth, setPaymethod] = useState("COD")
     const changePaymethod = (e) => {
         setPaymethod(e.target.value)
-        console.log(e.target.value)
         let codbtn = document.getElementById("complete-order")
         let onlinebtn = document.getElementById("goto-pay")
         if(e.target.value==="COD"){
@@ -54,8 +45,7 @@ export default function Bill(props) {
     const navigate = useNavigate()
     const completeOrderWithCOD = async()=>{
         let newOrderData = {
-            cartItems : prodToBuy, subTotal: subtot, 
-            tax : tax, grandTotal: grdtot, paymentMethod : "Cash on Delivery"
+            cartItems : prodToBuy, grandTotal: grdtot, paymentMethod : "Cash on Delivery"
         }
         const res = await fetch(process.env.REACT_APP_BACKEND+"orders/add",{
             method: 'POST', body: JSON.stringify(newOrderData),
@@ -127,8 +117,6 @@ export default function Bill(props) {
                 </div>
             </div>
             <div>
-                <p className="final-entries">Sub Total: <b><u>{subtot}</u>/-</b></p>
-                <p className="final-entries">GST @5%: <b><u>{tax}</u>/-</b></p>
                 <p className="final-entries">Grand Total: <b><u>{grdtot}</u>/-</b></p>
             </div>
         </div>

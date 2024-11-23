@@ -84,6 +84,7 @@ export default function ProductDetails() {
                     :<div className='wrapper'>
                         <p className="disc-old-price">Rs. {state.price}/-</p>
                         <p className="disc-new-price">Rs. {Math.floor(state.price - (state.discount*state.price/100))}/-</p>
+                        <p className="notax">(Incl. of all taxes)</p>
                     </div>
                 }
                 </p>
