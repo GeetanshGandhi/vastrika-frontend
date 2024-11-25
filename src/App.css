@@ -66,4 +66,16 @@
         min-height: auto;
         padding: 30px 0 100px 0;
     }
+    .form-ip-head{
+        font-size: 20px;
+    }
+    .form-ip-input{
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    .form-ip-input:focus ~ .form-ip-head, .form-ip-input:not(:placeholder-shown) ~ .form-ip-head{
+        font-size: 15px;
+        top: 30px;
+        left: 10px;
+    }
 }

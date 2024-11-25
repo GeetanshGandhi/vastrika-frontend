@@ -92,3 +92,30 @@
     color: white;
     background-color: rgb(46, 0, 107);
 }
+
+@media only screen and (max-width: 500px) {
+    .register-form {
+        width: 98%;
+    }
+    .form-row-wrap {
+        display: block;
+    }
+    .add-details {
+        font-size: 20px;
+    }
+    #selectstate, #selectcity {
+        width: 100%;
+        font-size: 20px;
+    }
+    #pass-guide{
+        margin: 10px 0 0 0;
+        width: 100%;
+        font-size: 15px;
+    }
+    .alry-reg {
+        margin-bottom: 20px;
+    }
+    .goto-login {
+        margin-bottom: 20px;
+    }
+}
