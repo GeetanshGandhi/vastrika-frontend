@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vastrika-frontend/static/css/main.633eafc2.css",
+    "main.css": "/vastrika-frontend/static/css/main.2ca90f60.css",
     "main.js": "/vastrika-frontend/static/js/main.5d955373.js",
     "static/js/453.8ab44547.chunk.js": "/vastrika-frontend/static/js/453.8ab44547.chunk.js",
     "static/media/logo.png": "/vastrika-frontend/static/media/logo.2a7d27306acac9842ccc.png",
@@ -18,12 +18,12 @@
     "static/media/LinkedinIcon.svg": "/vastrika-frontend/static/media/LinkedinIcon.db07fa4e01a38ae9d1a0634e71d0ef69.svg",
     "static/media/Facebook.svg": "/vastrika-frontend/static/media/Facebook.7f7396a20758b0f66b5423d1e0cbb12b.svg",
     "static/media/Twitter.svg": "/vastrika-frontend/static/media/Twitter.f42c1b671597f44f57c2e33db732171a.svg",
-    "main.633eafc2.css.map": "/vastrika-frontend/static/css/main.633eafc2.css.map",
+    "main.2ca90f60.css.map": "/vastrika-frontend/static/css/main.2ca90f60.css.map",
     "main.5d955373.js.map": "/vastrika-frontend/static/js/main.5d955373.js.map",
     "453.8ab44547.chunk.js.map": "/vastrika-frontend/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.633eafc2.css",
+    "static/css/main.2ca90f60.css",
     "static/js/main.5d955373.js"
   ]
 }
