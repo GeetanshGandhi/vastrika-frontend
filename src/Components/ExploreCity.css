@@ -86,3 +86,17 @@
     font: 3vh Arial;
     color: black;
 }
+
+@media only screen and (max-width: 500px) {
+    .vendor-head {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .vendor {
+        margin: 0;
+        width: 87vw;
+    }
+    .vendor-name {
+        font-size: 27px;
+    }
+}

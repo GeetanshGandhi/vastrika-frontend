@@ -75,13 +75,15 @@ export default function ProductDetails() {
     return (
         <div className="prod-det-wrapper">
         <div className='prod-det-innerwrapper'>
+            <div className="wrapper">
             <img id='prod-image' src={`data:image/png;base64,${state.productImage}`} alt="" />
+            </div>
             <div className="prod-dets">
                 <p className='saree-title'>{state.productName}</p>
                 <p className="det-price">{
                     state.discount===0?
                     <span className='disc-new-price'>{state.price}</span>
-                    :<div className='wrapper'>
+                    :<div className='proddet-price-wrapper'>
                         <p className="disc-old-price">Rs. {state.price}/-</p>
                         <p className="disc-new-price">Rs. {Math.floor(state.price - (state.discount*state.price/100))}/-</p>
                         <p className="notax">(Incl. of all taxes)</p>
@@ -94,9 +96,11 @@ export default function ProductDetails() {
                 <p className="addon-info"><b>Blouse Fabric Included:</b> {state.blousePiece?"Yes":"No"}</p>
                 <p className="addon-info"><b>Length:</b> {state.length} meters</p>
                 <p className="addon-info"><b>Pattern</b> {state.pattern}</p>
-                <div className="wrapper">
+                <div className="addtocart-wrapper">
                     <p className="select-qty-msg">Select Quantity (less than 5) to add: </p>
-                    <input onChange={(e)=>handleChangeQty(e)} type="number" id='quantity-ip' min='1' max='5'/>
+                    <div className="wrapper">
+                        <input onChange={(e)=>handleChangeQty(e)} type="number" id='quantity-ip' min='1' max='5'/>
+                    </div>
                 </div>
                 {
                     state.quantityAvailable===0?

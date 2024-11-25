@@ -43,8 +43,8 @@
     font-weight: bold;    
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
 	max-height: 8vh;
+	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -88,4 +88,72 @@
     color: white;
     border-radius: 50%;
     transform: rotateZ(-30deg);
+}
+.zoom-icon {
+    display: none;
+}
+@media only screen and (max-width: 500px) {
+    .prod-item-container{
+        display: flex;
+        height: 150px;
+        width: 100%;
+        margin: 5px 0;
+        padding: 0;
+    }
+    .proditemcontain-right {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .stock-alert{
+        position: absolute;
+        top: 0px;
+        left: -10px;
+        z-index: 1;
+        font-size: 10px;
+    }
+    .prod-img {
+        height: 150px;
+    }
+    .proditemcontain-left{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .owner-name{
+        margin: 0;
+        font-size: 13px;
+    }
+    .prod-name{
+        text-align: center;
+        font: 17px "Nunito Sans", Arial;
+        line-height: 18px;
+        font-weight: bold;    
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        max-height: 70px;
+    }
+    .zoomed-img {
+        width: 90vw;
+        height: auto;
+    }
+    .close-icon {
+        z-index: 1;
+        right: 35px;
+        top: -270px;
+    }
+    .zoomicon {
+        position: absolute;
+        background-color: rgb(255,255,255,0.5);
+        padding: 6px;
+        border-radius: 10px;
+    }
+    .zoom-icon {
+        display: block;
+        height: 25px;
+        
+    }
 }

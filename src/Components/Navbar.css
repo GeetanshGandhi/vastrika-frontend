@@ -1,35 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 12vh;
     background-color: rgb(199, 186, 255);
-    @media (max-width: 500px) {
-        display: block;
-        height: 17vh;
-        padding: 10px 20px;
-    }
 }
 .nav-left-wrapper{
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 500px) {
-        transform: scale(0.6);
-        position: relative;
-        right: 15vw;
-        bottom: 2vh;
-        height: 9vh;
-    }
 }
 #nav-logo{
     height: 10vh;
     margin: 0 10px 0 10px;
-    @media (max-width: 500px ){
-        margin: 0 0 0 0;
-    }
 }
 .title-bigletter{
     position: relative;
@@ -45,21 +31,12 @@ nav{
     font: 7vh "Great Vibes", "Arial";
     font-weight: bold;
     color: rgb(80, 0, 69);
-    @media (max-width: 500px) {
-        top: 1vh;
-        left: 4vw;
-    }
 }
 .punchline{
     position: relative;
     bottom: 1.3vh;
     font: 3.2vh "Great Vibes", Arial;
     color:rgb(97, 0, 189);
-    @media (max-width: 500px) {
-        bottom: 0.5vh;
-        font-size: 4vh;
-        width: 250px;
-    }
 }
 .gotologin-btn{
     padding: 3px 20px;
@@ -95,9 +72,6 @@ nav{
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     transition: all 0.2s ease-out;
-    @media (max-width: 500px){
-        margin: 0 0 10px 0;
-    }
 }
 .search-bar:hover{
     transform: scale(1.05);
@@ -117,9 +91,6 @@ nav{
     width: 400px;
     border:none;
     background-color: rgb(0,0,0,0)  ;
-    @media (max-width: 500px) {
-        font-size: 2vh;
-    }
 }
 .search-bar input:focus{
     outline: none;
@@ -196,7 +167,7 @@ nav{
 .submenu-link-in:hover > .submenu-link-in-p{
     transform: translateX(10px);
 }
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 .submenu-link{
     text-decoration: none;
     font: 3vh "Manrope", Arial;
@@ -248,4 +219,58 @@ nav{
 .home-link:hover{
     transform: scale(1.1);
     background-color: rgb(255,255,255,0.5);
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        display: block;
+        height: 24vh;
+        padding: 10px 20px;
+    }
+    .nav-left-wrapper {
+        transform: scale(0.6);
+        position: relative;
+        right: 15vw;
+        bottom: 2vh;
+        height: 9vh;
+    }
+    #nav-logo{
+        margin: 0 0 0 0;
+    }
+    .title{
+        top: 1vh;
+        left: 4vw;
+    }
+    .punchline {
+        bottom: 0.5vh;
+        font-size: 4vh;
+        width: 250px;
+    }
+    .search-bar {
+        margin: 0 0 10px 0;
+    }
+    .search-bar input {
+        font-size: 2vh;
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+    }
+    .nolog-home-link{ 
+        margin: 0;
+        padding: 0;
+    }
+    .dp-init {
+        position: absolute;
+        top: 1vh;
+        right: 2vw;
+    }
+    .submenu-wrap {
+        position: absolute;
+        top: 0.5vh;
+        right: -2vh;
+    }
+    .submenu{
+        transform: scale(0.8);
+    }
 }

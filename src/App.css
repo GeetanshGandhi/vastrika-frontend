@@ -23,9 +23,7 @@
 	align-items: center;
 	min-height: 88vh;
 	background-color: rgb(247, 240, 255);
-	@media (max-width: 500px){
-		padding: 20px;
-	}
+
 }
 
 /* form data input css*/
@@ -61,4 +59,11 @@
     top: 3.5vh;
     font-size: 2.5vh;
     background-color: white;
+}
+
+@media only screen and (max-width: 500px) {
+    .super-flex-container {
+        min-height: auto;
+        padding: 30px 0 100px 0;
+    }
 }

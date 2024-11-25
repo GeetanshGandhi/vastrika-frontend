@@ -13,9 +13,6 @@
     border-radius: 20px;
     margin: 0 20px;
     text-decoration: none;
-    @media (max-width: 500px){
-        transform: scale(0.7);
-    }
 }
 .city-image{
     height: 150px;
@@ -32,9 +29,10 @@
     align-items: center;
 }
 .city-scroll{
+    white-space: nowrap;
     width: 97%;
-    position: relative;
-    display:flex;
+    /* position: relative;*/
+     display:flex;
     justify-content: center;
     background-color: white;
     margin: 20px 10px;
@@ -42,10 +40,9 @@
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent, #fff 2%, #fff 98%, transparent)
 }
-.city-slide{
-    white-space: nowrap;
+.city-slide{    
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     animation: 10s infi-scroll infinite linear;
 }
 @keyframes infi-scroll {
@@ -77,4 +74,28 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 500px) {
+    .explore-heritage-msg {
+        font-size: 20px;
+        margin: 10px 0 0 0;
+        position: relative;
+        right: 60px;
+    }
+    .city-container {
+        transform: scale(0.7);
+        width:550px;
+        position: relative;
+        right: 80px;
+        bottom: 30px;
+    }
+    .city-scroll{
+        width: 100%;
+    }
+    .arrows{
+        position: relative;
+        right: 27px;
+        transform: scale(0.7);
+    }
 }

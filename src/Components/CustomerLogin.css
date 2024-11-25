@@ -6,20 +6,13 @@
     height: 90%;
     box-shadow: 0 0 20px rgb(92, 92, 92);
     padding: 4vh 0;
-    @media (max-width: 1000px) {
-        width: 95%;
-        height: 95%;
-        padding: 2vh 0;
-    }
 }
 .login-head{
     text-align: center;
     margin: 20px;
     font: 6vh "Poppins";
     font-weight: bold;
-    @media (max-width: 500px){
-        font-size: 35px;
-    }
+
 }
 .mail-container{
     width: 80%;
@@ -32,9 +25,6 @@
 .ip-head{
     font: 3.5vh Arial;
     margin: 5px 0;
-    @media (max-width: 500px){
-        font-size: 15px;
-    }
 }
 .ip-input{
     width: 100%;
@@ -108,4 +98,21 @@
     transform: scale(1.1);
     background-color: rgba(26, 1, 138);
     color: white;
+}
+
+@media only screen and (max-width: 500px){
+    .login-container {
+        width: 95%;
+        height: 95%;
+        padding: 2vh 0;
+    }
+    .login-head{
+        font-size: 23px;
+    }
+    .ip-head {
+        font-size: 17px;
+    }
+    .ip-input {
+        font-size: 20px;
+    }
 }

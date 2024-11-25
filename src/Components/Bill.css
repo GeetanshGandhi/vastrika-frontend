@@ -67,3 +67,30 @@ td{
 #goto-pay{
     display:none;
 }
+
+@media only screen and (max-width: 500px) {
+    table{
+        margin-top: 10px 0 0 0;
+        width: 97vw;
+    }
+    th{
+        border: 1px solid rgb(180, 180, 180);
+        font-size: 15px;
+    }
+    td{
+        border: 1px solid rgb(180, 180, 180);
+        font-size: 15px;
+    }
+    .final-entry-wrapper {
+        margin: 0;
+        display: block;
+    }
+    .delivery-head {
+        margin-top: 25px;
+        font-size: 25px;
+    }
+    .final-entries {
+        margin-top: 25px;
+        text-align: center;
+    }
+}

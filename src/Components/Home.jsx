@@ -22,13 +22,13 @@ export default function Home() {
 			}).then((res)=>res.json()).then((data)=>setAllCity(data))
 		})
 	},[])
-	useEffect(()=>{
-		if(allCity.length<=5){
-			document.querySelector(".city-slide").style.animationPlayState = "paused";
-			document.querySelector(".city-scroll").style.width = "100%";
-			document.querySelector(".arrows").style.display = "none";
-		}
-	}, [allCity])
+	// useEffect(()=>{
+	// 	if(allCity.length<=5){
+	// 		document.querySelector(".city-slide").style.animationPlayState = "paused";
+	// 		document.querySelector(".city-scroll").style.width = "100%";
+	// 		document.querySelector(".arrows").style.display = "none";
+	// 	}
+	// }, [allCity])
 	//right scroll function
 	const rightScroll = () => {
 		document.querySelector(".city-scroll").scrollBy({left: 150, behavior: 'smooth'})
@@ -52,10 +52,36 @@ export default function Home() {
 							})
 						}
 					</div>
-					
+					<div className="city-slide">
+						{	
+							allCity.filter((city)=>{
+								return city["pinCode"]!=="000000"
+							}).map((city)=>{
+								return <Link className='city-item' to="./exploreCity" state={{city: city}}>
+									<div className="wrapper">
+										<img className='city-image'  src={`data:image/png;base64,${city.icon}`} alt="" />
+									</div>
+									<p className="cityitem-name">{city["cityName"]}</p>
+								</Link>
+							})
+						}
+					</div>
+					<div className="city-slide">
+						{	
+							allCity.filter((city)=>{
+								return city["pinCode"]!=="000000"
+							}).map((city)=>{
+								return <Link className='city-item' to="./exploreCity" state={{city: city}}>
+									<div className="wrapper">
+										<img className='city-image'  src={`data:image/png;base64,${city.icon}`} alt="" />
+									</div>
+									<p className="cityitem-name">{city["cityName"]}</p>
+								</Link>
+							})
+						}
+					</div>
 					{
-						allCity.length>5 &&
-					
+						allCity.length <=3 &&
 					<div className="city-slide">
 						{	
 							allCity.filter((city)=>{
@@ -67,8 +93,8 @@ export default function Home() {
 								</Link>
 							})
 						}
-					</div>	
-					}
+					</div>
+					}	
 				</div>
 				<div className="arrow-wrap" onClick={rightScroll}>
 					<img className='arrows' src={require("../images/icons/rightScoll.webp")} alt="left"/>
