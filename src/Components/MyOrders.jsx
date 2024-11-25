@@ -128,10 +128,14 @@ export default function MyOrders() {
 				orders.map((item)=>{
 					return <div className="wrapper"><div className="order-item" role={item.orderId}>
 						<div className="orditem-top-wrapper">
-							<p className="placed-on">Placed On:<br/>
-								{" "+item["orders"]["orderDateTime"].substring(8, 10)+" "+monthMapping[item["orders"]["orderDateTime"].substring(5, 7)]+", "+item["orders"]["orderDateTime"].substring(0, 4)}
-							</p>
-							<p className="total-amt" role={item.orderId}>Total Amount: <b><br />Rs. {item["orders"]["grandTotal"]}/-</b></p>
+							<div className="placedon-wrap">
+								<p style={{paddingRight:"10px"}} className="placed-on">Placed On:</p>
+								<p className="placed-on">{" "+item["orders"]["orderDateTime"].substring(8, 10)+" "+monthMapping[item["orders"]["orderDateTime"].substring(5, 7)]+", "+item["orders"]["orderDateTime"].substring(0, 4)}</p>
+							</div>
+							<div className="placedon-wrap">
+								<p style={{paddingRight:"10px"}} className="total-amt"><b>Total Amount:</b></p>
+								<p className="total-amt">Rs. {item["orders"]["grandTotal"]}/-</p>
+							</div>
 							<p className="ord-id">Order Id: <u>{item["orders"]["orderId"]}</u></p>
 						</div>
 						<hr style={{borderBottom:"1px solid grey"}} />
@@ -143,17 +147,20 @@ export default function MyOrders() {
 							{
 								item["productOrderedList"].map((item1)=>{
 									return <div className="prod-in-ord-item" role={item1.product.productId+","+item1.orders.orderId}>
-										<div className="ord-prod-img-wrap">
-											<img className='ord-prod-img' src={`data:image/png;base64,${item1.product.productImage}`} alt="prod" />
-										</div>
-										<div className="ord-prod-mid-wrap">
-											<p className="ord-prod-name">{item1["product"]["productName"]}</p>
-											<div className="wrapper">
-												<button onClick={()=>navigate("/productDetails", {state:item1["product"]})} className='in-ord-btns view-prod'>View Product</button>
-												{
-													item["orders"]["status"]==="Complete" && 
-													<button className='in-ord-btns review-prod'>Review Product</button>
-												}
+										<div className="ordprod-upwrap">
+											<div className="ord-prod-img-wrap">
+												<img className='ord-prod-img' src={`data:image/png;base64,${item1.product.productImage}`} alt="prod" />
+											</div>
+											<div className="ord-prod-mid-wrap">
+												<p className="ord-prod-name">{item1["product"]["productName"]}</p>
+												<div className="prodorderbutton-wrapper">
+													<button onClick={()=>navigate("/productDetails", {state:item1["product"]})} className='in-ord-btns view-prod'>View Product</button>
+													{
+														item1["status"]==="Complete" && <>
+														<button className='in-ord-btns review-prod'>Review Product</button>
+														</>
+													}
+												</div>
 											</div>
 										</div>
 										<div className="ord-prod-right-wrap">

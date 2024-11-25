@@ -34,7 +34,7 @@
 }
 .total-amt{
     font: 2.7vh "Ubuntu", Arial;
-    text-align: right;
+    text-align: center;
 }
 .expand-btn{
     height: 40px;
@@ -48,6 +48,11 @@
 .expand-btn:hover{
     background-color: rgb(251, 233, 255);
     cursor: pointer;
+}
+.ordprod-upwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .orditem-btm-wrapper{
     margin-top: 10px;
@@ -103,9 +108,13 @@
     font-weight: bold;
     color: rgba(82, 0, 82, 0.767);
 }
+.prodorderbutton-wrapper {
+    display: flex;
+    justify-content: center
+}
 .in-ord-btns{
     margin: 0.7vh 0.2vw;
-    padding: 3px 40px;
+    padding: 3px 25px;
     font: 2vh "Poppins", Arial;
     font-weight: bold;
     border-radius: 10px;
@@ -170,5 +179,44 @@
     }
     .orditem-top-wrapper{
         display: block;
+    }
+    .placedon-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prod-in-ord-item {
+        border: none;
+        display: block;
+    }
+    .ordprod-upwrap {
+        justify-content: space-between;
+    }
+    .ord-prod-mid-wrap {
+        width: 100%;
+    }
+    .ord-prod-img-wrap {
+        width: auto;
+    }
+    .ord-prod-name{
+        font-size: 15px;
+        width: 100%
+    }
+    .prodorderbutton-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .in-ord-btns {
+        font-size: 13px;
+        width: 90%;
+    }
+    .ord-prod-right-wrap {
+        border: none;
+        border-bottom: 1px solid rgb(187, 187, 187);
+        width: 100%;
+    }
+    .ord-prod-qty {
+        font-size: 15px;
     }
 }
